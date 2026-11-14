@@ -21,7 +21,9 @@ export default function Home({ go }) {
         <div className="lg:-translate-y-12">
           <h1 className="font-display text-7xl sm:text-8xl tracking-tighter leading-none">RoTerra</h1>
           <p className="text-white text-xl leading-normal max-w-[40ch] mt-3">
-            RoTerra doesn’t just tell a farmer which crop rotation looks best today. It shows which holds up across hundreds of plausible climate futures, and explains every score with NASA evidence.
+            See beyond today’s forecast.
+            Compare crop rotations across hundreds of climate futures.
+            Every score explained by NASA data.
           </p>
           <button className="btn btn-ink mt-5 h-12" onClick={() => go("Explorer")}>Launch the Explorer</button>
         </div>
