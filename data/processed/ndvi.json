@@ -1,0 +1,1840 @@
+{
+  "source": "Landsat 8/9 Collection 2 Level-2 via Microsoft Planetary Computer",
+  "method": "Mean NDVI over site bbox per clear scene, May-Sep, cloud cover <40%, QA-masked",
+  "years": {
+    "2014": {
+      "scenes": [
+        {
+          "date": "2014-05-05",
+          "mean_ndvi": 0.161,
+          "n_pixels": 17530
+        },
+        {
+          "date": "2014-05-12",
+          "mean_ndvi": 0.139,
+          "n_pixels": 17717
+        },
+        {
+          "date": "2014-05-12",
+          "mean_ndvi": 0.139,
+          "n_pixels": 12702
+        },
+        {
+          "date": "2014-05-21",
+          "mean_ndvi": 0.087,
+          "n_pixels": 16602
+        },
+        {
+          "date": "2014-05-28",
+          "mean_ndvi": 0.208,
+          "n_pixels": 16368
+        },
+        {
+          "date": "2014-05-28",
+          "mean_ndvi": 0.204,
+          "n_pixels": 8797
+        },
+        {
+          "date": "2014-06-06",
+          "mean_ndvi": 0.394,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-06-13",
+          "mean_ndvi": 0.563,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-06-13",
+          "mean_ndvi": 0.627,
+          "n_pixels": 9424
+        },
+        {
+          "date": "2014-06-22",
+          "mean_ndvi": 0.67,
+          "n_pixels": 17585
+        },
+        {
+          "date": "2014-06-29",
+          "mean_ndvi": 0.71,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-06-29",
+          "mean_ndvi": 0.792,
+          "n_pixels": 8008
+        },
+        {
+          "date": "2014-07-24",
+          "mean_ndvi": 0.758,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-07-31",
+          "mean_ndvi": 0.78,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-07-31",
+          "mean_ndvi": 0.86,
+          "n_pixels": 8712
+        },
+        {
+          "date": "2014-08-09",
+          "mean_ndvi": 0.751,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-08-16",
+          "mean_ndvi": 0.747,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-08-16",
+          "mean_ndvi": 0.812,
+          "n_pixels": 9289
+        },
+        {
+          "date": "2014-08-25",
+          "mean_ndvi": 0.703,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-09-01",
+          "mean_ndvi": 0.687,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-09-01",
+          "mean_ndvi": 0.743,
+          "n_pixels": 8913
+        },
+        {
+          "date": "2014-09-10",
+          "mean_ndvi": 0.634,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-09-17",
+          "mean_ndvi": 0.597,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2014-09-17",
+          "mean_ndvi": 0.641,
+          "n_pixels": 8560
+        },
+        {
+          "date": "2014-09-26",
+          "mean_ndvi": 0.527,
+          "n_pixels": 17820
+        }
+      ],
+      "n_scenes": 25,
+      "peak_ndvi": 0.86,
+      "season_mean_ndvi": 0.557
+    },
+    "2015": {
+      "scenes": [
+        {
+          "date": "2015-05-08",
+          "mean_ndvi": 0.094,
+          "n_pixels": 16191
+        },
+        {
+          "date": "2015-05-15",
+          "mean_ndvi": 0.154,
+          "n_pixels": 17619
+        },
+        {
+          "date": "2015-05-24",
+          "mean_ndvi": 0.229,
+          "n_pixels": 17554
+        },
+        {
+          "date": "2015-06-16",
+          "mean_ndvi": 0.665,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2015-06-16",
+          "mean_ndvi": 0.673,
+          "n_pixels": 8909
+        },
+        {
+          "date": "2015-06-25",
+          "mean_ndvi": 0.704,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2015-07-02",
+          "mean_ndvi": 0.719,
+          "n_pixels": 8891
+        },
+        {
+          "date": "2015-07-11",
+          "mean_ndvi": 0.757,
+          "n_pixels": 17815
+        },
+        {
+          "date": "2015-07-18",
+          "mean_ndvi": 0.778,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2015-07-18",
+          "mean_ndvi": 0.742,
+          "n_pixels": 9426
+        },
+        {
+          "date": "2015-07-27",
+          "mean_ndvi": 0.765,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2015-08-03",
+          "mean_ndvi": 0.74,
+          "n_pixels": 7897
+        },
+        {
+          "date": "2015-08-12",
+          "mean_ndvi": 0.716,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2015-08-19",
+          "mean_ndvi": 0.662,
+          "n_pixels": 8280
+        },
+        {
+          "date": "2015-09-04",
+          "mean_ndvi": 0.628,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2015-09-04",
+          "mean_ndvi": 0.603,
+          "n_pixels": 8084
+        },
+        {
+          "date": "2015-09-20",
+          "mean_ndvi": 0.508,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2015-09-20",
+          "mean_ndvi": 0.492,
+          "n_pixels": 9329
+        },
+        {
+          "date": "2015-09-29",
+          "mean_ndvi": 0.36,
+          "n_pixels": 17820
+        }
+      ],
+      "n_scenes": 19,
+      "peak_ndvi": 0.778,
+      "season_mean_ndvi": 0.578
+    },
+    "2016": {
+      "scenes": [
+        {
+          "date": "2016-05-01",
+          "mean_ndvi": 0.113,
+          "n_pixels": 17603
+        },
+        {
+          "date": "2016-05-01",
+          "mean_ndvi": 0.111,
+          "n_pixels": 14654
+        },
+        {
+          "date": "2016-05-10",
+          "mean_ndvi": 0.074,
+          "n_pixels": 15279
+        },
+        {
+          "date": "2016-05-17",
+          "mean_ndvi": 0.17,
+          "n_pixels": 17631
+        },
+        {
+          "date": "2016-05-17",
+          "mean_ndvi": 0.158,
+          "n_pixels": 9361
+        },
+        {
+          "date": "2016-05-26",
+          "mean_ndvi": 0.297,
+          "n_pixels": 17519
+        },
+        {
+          "date": "2016-06-02",
+          "mean_ndvi": 0.505,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-06-02",
+          "mean_ndvi": 0.522,
+          "n_pixels": 8841
+        },
+        {
+          "date": "2016-06-11",
+          "mean_ndvi": 0.711,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-06-18",
+          "mean_ndvi": 0.717,
+          "n_pixels": 17140
+        },
+        {
+          "date": "2016-06-18",
+          "mean_ndvi": 0.726,
+          "n_pixels": 7382
+        },
+        {
+          "date": "2016-06-27",
+          "mean_ndvi": 0.816,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-07-04",
+          "mean_ndvi": 0.862,
+          "n_pixels": 8710
+        },
+        {
+          "date": "2016-07-13",
+          "mean_ndvi": 0.853,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-07-20",
+          "mean_ndvi": 0.89,
+          "n_pixels": 17819
+        },
+        {
+          "date": "2016-07-20",
+          "mean_ndvi": 0.889,
+          "n_pixels": 8894
+        },
+        {
+          "date": "2016-07-29",
+          "mean_ndvi": 0.827,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-08-05",
+          "mean_ndvi": 0.843,
+          "n_pixels": 8060
+        },
+        {
+          "date": "2016-08-14",
+          "mean_ndvi": 0.793,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-08-21",
+          "mean_ndvi": 0.767,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-08-21",
+          "mean_ndvi": 0.761,
+          "n_pixels": 8303
+        },
+        {
+          "date": "2016-08-30",
+          "mean_ndvi": 0.713,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-09-06",
+          "mean_ndvi": 0.655,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-09-06",
+          "mean_ndvi": 0.651,
+          "n_pixels": 8977
+        },
+        {
+          "date": "2016-09-15",
+          "mean_ndvi": 0.583,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-09-22",
+          "mean_ndvi": 0.516,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2016-09-22",
+          "mean_ndvi": 0.528,
+          "n_pixels": 8712
+        }
+      ],
+      "n_scenes": 27,
+      "peak_ndvi": 0.89,
+      "season_mean_ndvi": 0.594
+    },
+    "2017": {
+      "scenes": [
+        {
+          "date": "2017-05-04",
+          "mean_ndvi": 0.168,
+          "n_pixels": 17626
+        },
+        {
+          "date": "2017-05-04",
+          "mean_ndvi": 0.179,
+          "n_pixels": 7104
+        },
+        {
+          "date": "2017-05-13",
+          "mean_ndvi": 0.071,
+          "n_pixels": 16099
+        },
+        {
+          "date": "2017-05-20",
+          "mean_ndvi": 0.047,
+          "n_pixels": 15616
+        },
+        {
+          "date": "2017-05-20",
+          "mean_ndvi": 0.036,
+          "n_pixels": 7629
+        },
+        {
+          "date": "2017-05-29",
+          "mean_ndvi": 0.242,
+          "n_pixels": 17331
+        },
+        {
+          "date": "2017-06-05",
+          "mean_ndvi": 0.391,
+          "n_pixels": 17808
+        },
+        {
+          "date": "2017-06-05",
+          "mean_ndvi": 0.367,
+          "n_pixels": 9160
+        },
+        {
+          "date": "2017-06-14",
+          "mean_ndvi": 0.617,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-06-21",
+          "mean_ndvi": 0.726,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-06-21",
+          "mean_ndvi": 0.746,
+          "n_pixels": 9050
+        },
+        {
+          "date": "2017-06-30",
+          "mean_ndvi": 0.793,
+          "n_pixels": 17818
+        },
+        {
+          "date": "2017-07-07",
+          "mean_ndvi": 0.854,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-07-07",
+          "mean_ndvi": 0.855,
+          "n_pixels": 8206
+        },
+        {
+          "date": "2017-07-16",
+          "mean_ndvi": 0.849,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-07-23",
+          "mean_ndvi": 0.861,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-07-23",
+          "mean_ndvi": 0.856,
+          "n_pixels": 8460
+        },
+        {
+          "date": "2017-08-01",
+          "mean_ndvi": 0.816,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-08-08",
+          "mean_ndvi": 0.832,
+          "n_pixels": 8932
+        },
+        {
+          "date": "2017-08-17",
+          "mean_ndvi": 0.783,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-08-24",
+          "mean_ndvi": 0.771,
+          "n_pixels": 17819
+        },
+        {
+          "date": "2017-08-24",
+          "mean_ndvi": 0.779,
+          "n_pixels": 9084
+        },
+        {
+          "date": "2017-09-02",
+          "mean_ndvi": 0.704,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-09-09",
+          "mean_ndvi": 0.678,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-09-09",
+          "mean_ndvi": 0.694,
+          "n_pixels": 8572
+        },
+        {
+          "date": "2017-09-18",
+          "mean_ndvi": 0.587,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2017-09-25",
+          "mean_ndvi": 0.465,
+          "n_pixels": 15051
+        },
+        {
+          "date": "2017-09-25",
+          "mean_ndvi": 0.51,
+          "n_pixels": 6536
+        }
+      ],
+      "n_scenes": 28,
+      "peak_ndvi": 0.861,
+      "season_mean_ndvi": 0.581
+    },
+    "2018": {
+      "scenes": [
+        {
+          "date": "2018-05-07",
+          "mean_ndvi": 0.111,
+          "n_pixels": 17093
+        },
+        {
+          "date": "2018-05-07",
+          "mean_ndvi": 0.12,
+          "n_pixels": 11602
+        },
+        {
+          "date": "2018-06-01",
+          "mean_ndvi": 0.374,
+          "n_pixels": 17569
+        },
+        {
+          "date": "2018-06-08",
+          "mean_ndvi": 0.561,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-06-08",
+          "mean_ndvi": 0.532,
+          "n_pixels": 7532
+        },
+        {
+          "date": "2018-06-17",
+          "mean_ndvi": 0.718,
+          "n_pixels": 17819
+        },
+        {
+          "date": "2018-06-24",
+          "mean_ndvi": 0.807,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-06-24",
+          "mean_ndvi": 0.796,
+          "n_pixels": 8044
+        },
+        {
+          "date": "2018-07-03",
+          "mean_ndvi": 0.82,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-07-10",
+          "mean_ndvi": 0.875,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-07-10",
+          "mean_ndvi": 0.875,
+          "n_pixels": 7909
+        },
+        {
+          "date": "2018-07-19",
+          "mean_ndvi": 0.854,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-07-26",
+          "mean_ndvi": 0.787,
+          "n_pixels": 12155
+        },
+        {
+          "date": "2018-07-26",
+          "mean_ndvi": 0.776,
+          "n_pixels": 4106
+        },
+        {
+          "date": "2018-08-04",
+          "mean_ndvi": 0.781,
+          "n_pixels": 17790
+        },
+        {
+          "date": "2018-08-11",
+          "mean_ndvi": 0.79,
+          "n_pixels": 17815
+        },
+        {
+          "date": "2018-08-11",
+          "mean_ndvi": 0.796,
+          "n_pixels": 8041
+        },
+        {
+          "date": "2018-08-20",
+          "mean_ndvi": 0.762,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-08-27",
+          "mean_ndvi": 0.744,
+          "n_pixels": 8157
+        },
+        {
+          "date": "2018-09-05",
+          "mean_ndvi": 0.681,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-09-12",
+          "mean_ndvi": 0.611,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-09-21",
+          "mean_ndvi": 0.503,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2018-09-28",
+          "mean_ndvi": 0.316,
+          "n_pixels": 1561
+        }
+      ],
+      "n_scenes": 23,
+      "peak_ndvi": 0.875,
+      "season_mean_ndvi": 0.652
+    },
+    "2019": {
+      "scenes": [
+        {
+          "date": "2019-05-03",
+          "mean_ndvi": 0.132,
+          "n_pixels": 17814
+        },
+        {
+          "date": "2019-05-10",
+          "mean_ndvi": 0.052,
+          "n_pixels": 17717
+        },
+        {
+          "date": "2019-05-10",
+          "mean_ndvi": 0.071,
+          "n_pixels": 9230
+        },
+        {
+          "date": "2019-06-04",
+          "mean_ndvi": 0.462,
+          "n_pixels": 17817
+        },
+        {
+          "date": "2019-06-11",
+          "mean_ndvi": 0.594,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-06-11",
+          "mean_ndvi": 0.569,
+          "n_pixels": 9714
+        },
+        {
+          "date": "2019-06-20",
+          "mean_ndvi": 0.757,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-06-27",
+          "mean_ndvi": 0.829,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-06-27",
+          "mean_ndvi": 0.834,
+          "n_pixels": 9329
+        },
+        {
+          "date": "2019-07-06",
+          "mean_ndvi": 0.833,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-07-13",
+          "mean_ndvi": 0.88,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-07-13",
+          "mean_ndvi": 0.88,
+          "n_pixels": 8219
+        },
+        {
+          "date": "2019-07-22",
+          "mean_ndvi": 0.856,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-07-29",
+          "mean_ndvi": 0.87,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-07-29",
+          "mean_ndvi": 0.875,
+          "n_pixels": 8213
+        },
+        {
+          "date": "2019-08-07",
+          "mean_ndvi": 0.819,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-08-14",
+          "mean_ndvi": 0.816,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-08-14",
+          "mean_ndvi": 0.834,
+          "n_pixels": 8267
+        },
+        {
+          "date": "2019-08-23",
+          "mean_ndvi": 0.755,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-08-30",
+          "mean_ndvi": 0.737,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-08-30",
+          "mean_ndvi": 0.759,
+          "n_pixels": 7962
+        },
+        {
+          "date": "2019-09-08",
+          "mean_ndvi": 0.654,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-09-15",
+          "mean_ndvi": 0.553,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2019-09-15",
+          "mean_ndvi": 0.582,
+          "n_pixels": 8493
+        },
+        {
+          "date": "2019-09-24",
+          "mean_ndvi": 0.447,
+          "n_pixels": 17820
+        }
+      ],
+      "n_scenes": 25,
+      "peak_ndvi": 0.88,
+      "season_mean_ndvi": 0.658
+    },
+    "2020": {
+      "scenes": [
+        {
+          "date": "2020-05-05",
+          "mean_ndvi": 0.094,
+          "n_pixels": 16679
+        },
+        {
+          "date": "2020-05-21",
+          "mean_ndvi": 0.195,
+          "n_pixels": 16728
+        },
+        {
+          "date": "2020-05-28",
+          "mean_ndvi": 0.329,
+          "n_pixels": 17587
+        },
+        {
+          "date": "2020-05-28",
+          "mean_ndvi": 0.275,
+          "n_pixels": 7685
+        },
+        {
+          "date": "2020-06-06",
+          "mean_ndvi": 0.605,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-06-13",
+          "mean_ndvi": 0.711,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-06-22",
+          "mean_ndvi": 0.774,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-06-29",
+          "mean_ndvi": 0.827,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-06-29",
+          "mean_ndvi": 0.842,
+          "n_pixels": 9057
+        },
+        {
+          "date": "2020-07-08",
+          "mean_ndvi": 0.811,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-07-15",
+          "mean_ndvi": 0.832,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-07-15",
+          "mean_ndvi": 0.849,
+          "n_pixels": 8791
+        },
+        {
+          "date": "2020-07-24",
+          "mean_ndvi": 0.807,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-07-31",
+          "mean_ndvi": 0.815,
+          "n_pixels": 17819
+        },
+        {
+          "date": "2020-07-31",
+          "mean_ndvi": 0.839,
+          "n_pixels": 8090
+        },
+        {
+          "date": "2020-08-09",
+          "mean_ndvi": 0.752,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-08-25",
+          "mean_ndvi": 0.652,
+          "n_pixels": 2186
+        },
+        {
+          "date": "2020-09-01",
+          "mean_ndvi": 0.665,
+          "n_pixels": 8730
+        },
+        {
+          "date": "2020-09-17",
+          "mean_ndvi": 0.444,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2020-09-17",
+          "mean_ndvi": 0.471,
+          "n_pixels": 9370
+        }
+      ],
+      "n_scenes": 20,
+      "peak_ndvi": 0.849,
+      "season_mean_ndvi": 0.629
+    },
+    "2021": {
+      "scenes": [
+        {
+          "date": "2021-05-08",
+          "mean_ndvi": 0.081,
+          "n_pixels": 17509
+        },
+        {
+          "date": "2021-05-15",
+          "mean_ndvi": 0.156,
+          "n_pixels": 2206
+        },
+        {
+          "date": "2021-05-31",
+          "mean_ndvi": 0.294,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-05-31",
+          "mean_ndvi": 0.292,
+          "n_pixels": 10854
+        },
+        {
+          "date": "2021-06-09",
+          "mean_ndvi": 0.467,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-06-16",
+          "mean_ndvi": 0.571,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-06-16",
+          "mean_ndvi": 0.561,
+          "n_pixels": 10399
+        },
+        {
+          "date": "2021-06-25",
+          "mean_ndvi": 0.641,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-07-02",
+          "mean_ndvi": 0.68,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-07-02",
+          "mean_ndvi": 0.691,
+          "n_pixels": 9237
+        },
+        {
+          "date": "2021-07-11",
+          "mean_ndvi": 0.676,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-07-18",
+          "mean_ndvi": 0.692,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-07-18",
+          "mean_ndvi": 0.734,
+          "n_pixels": 7870
+        },
+        {
+          "date": "2021-08-03",
+          "mean_ndvi": 0.7,
+          "n_pixels": 8640
+        },
+        {
+          "date": "2021-08-12",
+          "mean_ndvi": 0.619,
+          "n_pixels": 17816
+        },
+        {
+          "date": "2021-08-19",
+          "mean_ndvi": 0.631,
+          "n_pixels": 8298
+        },
+        {
+          "date": "2021-08-28",
+          "mean_ndvi": 0.555,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-09-04",
+          "mean_ndvi": 0.529,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-09-04",
+          "mean_ndvi": 0.552,
+          "n_pixels": 8825
+        },
+        {
+          "date": "2021-09-13",
+          "mean_ndvi": 0.445,
+          "n_pixels": 17803
+        },
+        {
+          "date": "2021-09-20",
+          "mean_ndvi": 0.393,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2021-09-20",
+          "mean_ndvi": 0.413,
+          "n_pixels": 8640
+        },
+        {
+          "date": "2021-09-29",
+          "mean_ndvi": 0.277,
+          "n_pixels": 17820
+        }
+      ],
+      "n_scenes": 23,
+      "peak_ndvi": 0.734,
+      "season_mean_ndvi": 0.507
+    },
+    "2022": {
+      "scenes": [
+        {
+          "date": "2022-05-03",
+          "mean_ndvi": 0.217,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-05-10",
+          "mean_ndvi": 0.239,
+          "n_pixels": 14094
+        },
+        {
+          "date": "2022-05-11",
+          "mean_ndvi": 0.227,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-05-18",
+          "mean_ndvi": 0.23,
+          "n_pixels": 17747
+        },
+        {
+          "date": "2022-05-19",
+          "mean_ndvi": 0.224,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-05-27",
+          "mean_ndvi": 0.226,
+          "n_pixels": 13133
+        },
+        {
+          "date": "2022-06-11",
+          "mean_ndvi": 0.229,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-06-19",
+          "mean_ndvi": 0.224,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-06-19",
+          "mean_ndvi": 0.242,
+          "n_pixels": 11244
+        },
+        {
+          "date": "2022-06-27",
+          "mean_ndvi": 0.232,
+          "n_pixels": 12606
+        },
+        {
+          "date": "2022-07-06",
+          "mean_ndvi": 0.217,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-07-13",
+          "mean_ndvi": 0.218,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-07-13",
+          "mean_ndvi": 0.242,
+          "n_pixels": 8323
+        },
+        {
+          "date": "2022-07-21",
+          "mean_ndvi": 0.235,
+          "n_pixels": 9485
+        },
+        {
+          "date": "2022-07-22",
+          "mean_ndvi": 0.204,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-07-29",
+          "mean_ndvi": 0.214,
+          "n_pixels": 17480
+        },
+        {
+          "date": "2022-07-29",
+          "mean_ndvi": 0.229,
+          "n_pixels": 10707
+        },
+        {
+          "date": "2022-08-06",
+          "mean_ndvi": 0.238,
+          "n_pixels": 11131
+        },
+        {
+          "date": "2022-08-07",
+          "mean_ndvi": 0.214,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-08-14",
+          "mean_ndvi": 0.214,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-08-14",
+          "mean_ndvi": 0.225,
+          "n_pixels": 11541
+        },
+        {
+          "date": "2022-08-30",
+          "mean_ndvi": 0.23,
+          "n_pixels": 10409
+        },
+        {
+          "date": "2022-08-31",
+          "mean_ndvi": 0.209,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-09-07",
+          "mean_ndvi": 0.207,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-09-08",
+          "mean_ndvi": 0.199,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2022-09-15",
+          "mean_ndvi": 0.239,
+          "n_pixels": 9959
+        }
+      ],
+      "n_scenes": 26,
+      "peak_ndvi": 0.242,
+      "season_mean_ndvi": 0.224
+    },
+    "2023": {
+      "scenes": [
+        {
+          "date": "2023-05-13",
+          "mean_ndvi": 0.128,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-05-13",
+          "mean_ndvi": 0.136,
+          "n_pixels": 12610
+        },
+        {
+          "date": "2023-05-14",
+          "mean_ndvi": 0.127,
+          "n_pixels": 16384
+        },
+        {
+          "date": "2023-05-22",
+          "mean_ndvi": 0.119,
+          "n_pixels": 16363
+        },
+        {
+          "date": "2023-05-29",
+          "mean_ndvi": 0.251,
+          "n_pixels": 7552
+        },
+        {
+          "date": "2023-05-30",
+          "mean_ndvi": 0.223,
+          "n_pixels": 15216
+        },
+        {
+          "date": "2023-06-15",
+          "mean_ndvi": 0.626,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-06-23",
+          "mean_ndvi": 0.759,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-06-30",
+          "mean_ndvi": 0.823,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-06-30",
+          "mean_ndvi": 0.822,
+          "n_pixels": 10770
+        },
+        {
+          "date": "2023-07-01",
+          "mean_ndvi": 0.815,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-07-08",
+          "mean_ndvi": 0.856,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-07-08",
+          "mean_ndvi": 0.852,
+          "n_pixels": 10000
+        },
+        {
+          "date": "2023-07-09",
+          "mean_ndvi": 0.839,
+          "n_pixels": 17819
+        },
+        {
+          "date": "2023-07-16",
+          "mean_ndvi": 0.84,
+          "n_pixels": 11188
+        },
+        {
+          "date": "2023-07-16",
+          "mean_ndvi": 0.827,
+          "n_pixels": 3453
+        },
+        {
+          "date": "2023-07-17",
+          "mean_ndvi": 0.855,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-07-24",
+          "mean_ndvi": 0.886,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-07-24",
+          "mean_ndvi": 0.883,
+          "n_pixels": 9252
+        },
+        {
+          "date": "2023-07-25",
+          "mean_ndvi": 0.867,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-08-01",
+          "mean_ndvi": 0.745,
+          "n_pixels": 1437
+        },
+        {
+          "date": "2023-08-02",
+          "mean_ndvi": 0.852,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-08-09",
+          "mean_ndvi": 0.861,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-08-09",
+          "mean_ndvi": 0.86,
+          "n_pixels": 8858
+        },
+        {
+          "date": "2023-08-10",
+          "mean_ndvi": 0.836,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-08-17",
+          "mean_ndvi": 0.809,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-08-18",
+          "mean_ndvi": 0.795,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-08-25",
+          "mean_ndvi": 0.79,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-08-25",
+          "mean_ndvi": 0.789,
+          "n_pixels": 9956
+        },
+        {
+          "date": "2023-08-26",
+          "mean_ndvi": 0.778,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-09-10",
+          "mean_ndvi": 0.682,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-09-10",
+          "mean_ndvi": 0.688,
+          "n_pixels": 8922
+        },
+        {
+          "date": "2023-09-11",
+          "mean_ndvi": 0.663,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-09-18",
+          "mean_ndvi": 0.593,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-09-18",
+          "mean_ndvi": 0.599,
+          "n_pixels": 10783
+        },
+        {
+          "date": "2023-09-19",
+          "mean_ndvi": 0.571,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-09-26",
+          "mean_ndvi": 0.48,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2023-09-27",
+          "mean_ndvi": 0.464,
+          "n_pixels": 17820
+        }
+      ],
+      "n_scenes": 38,
+      "peak_ndvi": 0.886,
+      "season_mean_ndvi": 0.668
+    },
+    "2024": {
+      "scenes": [
+        {
+          "date": "2024-05-07",
+          "mean_ndvi": 0.167,
+          "n_pixels": 17809
+        },
+        {
+          "date": "2024-05-07",
+          "mean_ndvi": 0.184,
+          "n_pixels": 12623
+        },
+        {
+          "date": "2024-05-08",
+          "mean_ndvi": 0.149,
+          "n_pixels": 17019
+        },
+        {
+          "date": "2024-05-15",
+          "mean_ndvi": 0.073,
+          "n_pixels": 17726
+        },
+        {
+          "date": "2024-05-15",
+          "mean_ndvi": 0.079,
+          "n_pixels": 11499
+        },
+        {
+          "date": "2024-05-16",
+          "mean_ndvi": 0.092,
+          "n_pixels": 15093
+        },
+        {
+          "date": "2024-05-23",
+          "mean_ndvi": 0.131,
+          "n_pixels": 14035
+        },
+        {
+          "date": "2024-05-23",
+          "mean_ndvi": 0.111,
+          "n_pixels": 9776
+        },
+        {
+          "date": "2024-05-24",
+          "mean_ndvi": 0.14,
+          "n_pixels": 17503
+        },
+        {
+          "date": "2024-05-31",
+          "mean_ndvi": 0.219,
+          "n_pixels": 17668
+        },
+        {
+          "date": "2024-05-31",
+          "mean_ndvi": 0.199,
+          "n_pixels": 11952
+        },
+        {
+          "date": "2024-06-01",
+          "mean_ndvi": 0.263,
+          "n_pixels": 16795
+        },
+        {
+          "date": "2024-06-09",
+          "mean_ndvi": 0.529,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-06-16",
+          "mean_ndvi": 0.669,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-06-17",
+          "mean_ndvi": 0.71,
+          "n_pixels": 17813
+        },
+        {
+          "date": "2024-06-24",
+          "mean_ndvi": 0.794,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-06-24",
+          "mean_ndvi": 0.781,
+          "n_pixels": 9825
+        },
+        {
+          "date": "2024-07-02",
+          "mean_ndvi": 0.855,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-07-02",
+          "mean_ndvi": 0.852,
+          "n_pixels": 10708
+        },
+        {
+          "date": "2024-07-03",
+          "mean_ndvi": 0.837,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-07-10",
+          "mean_ndvi": 0.86,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-07-10",
+          "mean_ndvi": 0.854,
+          "n_pixels": 9570
+        },
+        {
+          "date": "2024-07-11",
+          "mean_ndvi": 0.849,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-07-18",
+          "mean_ndvi": 0.884,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-07-18",
+          "mean_ndvi": 0.885,
+          "n_pixels": 12095
+        },
+        {
+          "date": "2024-07-19",
+          "mean_ndvi": 0.846,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-07-26",
+          "mean_ndvi": 0.886,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-07-26",
+          "mean_ndvi": 0.89,
+          "n_pixels": 11262
+        },
+        {
+          "date": "2024-07-27",
+          "mean_ndvi": 0.821,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-08-04",
+          "mean_ndvi": 0.83,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-08-11",
+          "mean_ndvi": 0.819,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-08-11",
+          "mean_ndvi": 0.828,
+          "n_pixels": 8934
+        },
+        {
+          "date": "2024-08-12",
+          "mean_ndvi": 0.802,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-08-19",
+          "mean_ndvi": 0.789,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-08-19",
+          "mean_ndvi": 0.799,
+          "n_pixels": 11112
+        },
+        {
+          "date": "2024-08-20",
+          "mean_ndvi": 0.771,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-08-28",
+          "mean_ndvi": 0.73,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-09-04",
+          "mean_ndvi": 0.692,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-09-04",
+          "mean_ndvi": 0.711,
+          "n_pixels": 8702
+        },
+        {
+          "date": "2024-09-05",
+          "mean_ndvi": 0.67,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-09-12",
+          "mean_ndvi": 0.635,
+          "n_pixels": 17819
+        },
+        {
+          "date": "2024-09-12",
+          "mean_ndvi": 0.658,
+          "n_pixels": 10443
+        },
+        {
+          "date": "2024-09-13",
+          "mean_ndvi": 0.61,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-09-20",
+          "mean_ndvi": 0.532,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-09-20",
+          "mean_ndvi": 0.556,
+          "n_pixels": 8539
+        },
+        {
+          "date": "2024-09-21",
+          "mean_ndvi": 0.505,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-09-28",
+          "mean_ndvi": 0.42,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2024-09-28",
+          "mean_ndvi": 0.444,
+          "n_pixels": 7308
+        },
+        {
+          "date": "2024-09-29",
+          "mean_ndvi": 0.4,
+          "n_pixels": 17820
+        }
+      ],
+      "n_scenes": 49,
+      "peak_ndvi": 0.89,
+      "season_mean_ndvi": 0.588
+    },
+    "2025": {
+      "scenes": [
+        {
+          "date": "2025-05-02",
+          "mean_ndvi": 0.186,
+          "n_pixels": 17801
+        },
+        {
+          "date": "2025-05-02",
+          "mean_ndvi": 0.195,
+          "n_pixels": 13353
+        },
+        {
+          "date": "2025-05-10",
+          "mean_ndvi": 0.13,
+          "n_pixels": 16350
+        },
+        {
+          "date": "2025-05-10",
+          "mean_ndvi": 0.137,
+          "n_pixels": 10043
+        },
+        {
+          "date": "2025-05-11",
+          "mean_ndvi": 0.191,
+          "n_pixels": 3503
+        },
+        {
+          "date": "2025-05-18",
+          "mean_ndvi": 0.108,
+          "n_pixels": 16447
+        },
+        {
+          "date": "2025-05-18",
+          "mean_ndvi": 0.108,
+          "n_pixels": 12380
+        },
+        {
+          "date": "2025-05-19",
+          "mean_ndvi": 0.113,
+          "n_pixels": 16498
+        },
+        {
+          "date": "2025-05-26",
+          "mean_ndvi": 0.078,
+          "n_pixels": 8855
+        },
+        {
+          "date": "2025-05-27",
+          "mean_ndvi": 0.158,
+          "n_pixels": 16617
+        },
+        {
+          "date": "2025-06-03",
+          "mean_ndvi": 0.353,
+          "n_pixels": 8976
+        },
+        {
+          "date": "2025-06-04",
+          "mean_ndvi": 0.4,
+          "n_pixels": 17792
+        },
+        {
+          "date": "2025-06-11",
+          "mean_ndvi": 0.588,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-06-11",
+          "mean_ndvi": 0.589,
+          "n_pixels": 9539
+        },
+        {
+          "date": "2025-06-12",
+          "mean_ndvi": 0.621,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-06-19",
+          "mean_ndvi": 0.735,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-06-19",
+          "mean_ndvi": 0.744,
+          "n_pixels": 10405
+        },
+        {
+          "date": "2025-06-20",
+          "mean_ndvi": 0.74,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-06-27",
+          "mean_ndvi": 0.811,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-06-27",
+          "mean_ndvi": 0.81,
+          "n_pixels": 10179
+        },
+        {
+          "date": "2025-06-28",
+          "mean_ndvi": 0.806,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-07-05",
+          "mean_ndvi": 0.859,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-07-05",
+          "mean_ndvi": 0.854,
+          "n_pixels": 9365
+        },
+        {
+          "date": "2025-07-06",
+          "mean_ndvi": 0.841,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-07-13",
+          "mean_ndvi": 0.863,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-07-13",
+          "mean_ndvi": 0.859,
+          "n_pixels": 9159
+        },
+        {
+          "date": "2025-07-14",
+          "mean_ndvi": 0.85,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-07-22",
+          "mean_ndvi": 0.858,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-07-29",
+          "mean_ndvi": 0.882,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-07-29",
+          "mean_ndvi": 0.887,
+          "n_pixels": 8616
+        },
+        {
+          "date": "2025-07-30",
+          "mean_ndvi": 0.855,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-08-06",
+          "mean_ndvi": 0.87,
+          "n_pixels": 9580
+        },
+        {
+          "date": "2025-08-07",
+          "mean_ndvi": 0.84,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-08-14",
+          "mean_ndvi": 0.835,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-08-14",
+          "mean_ndvi": 0.839,
+          "n_pixels": 9693
+        },
+        {
+          "date": "2025-08-15",
+          "mean_ndvi": 0.815,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-08-22",
+          "mean_ndvi": 0.792,
+          "n_pixels": 10356
+        },
+        {
+          "date": "2025-08-23",
+          "mean_ndvi": 0.773,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-08-30",
+          "mean_ndvi": 0.759,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-08-30",
+          "mean_ndvi": 0.766,
+          "n_pixels": 9186
+        },
+        {
+          "date": "2025-08-31",
+          "mean_ndvi": 0.739,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-09-08",
+          "mean_ndvi": 0.69,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-09-15",
+          "mean_ndvi": 0.639,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-09-15",
+          "mean_ndvi": 0.653,
+          "n_pixels": 9934
+        },
+        {
+          "date": "2025-09-16",
+          "mean_ndvi": 0.62,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-09-23",
+          "mean_ndvi": 0.554,
+          "n_pixels": 17820
+        },
+        {
+          "date": "2025-09-23",
+          "mean_ndvi": 0.577,
+          "n_pixels": 10299
+        }
+      ],
+      "n_scenes": 47,
+      "peak_ndvi": 0.887,
+      "season_mean_ndvi": 0.616
+    }
+  }
+}

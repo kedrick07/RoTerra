@@ -1,0 +1,40 @@
+{
+  "site_id": "colusa-basin-rice-01",
+  "name": "Colusa Basin rice landscape",
+  "region": "Colusa Basin, Colusa County, California",
+  "lat": 39.2979,
+  "lon": -122.1355,
+  "bbox": [-122.1541, 39.2757, -122.1169, 39.3200],
+  "area_ha": 1476,
+  "current_practice": "continuous rice (provisional, pending CDL history check; 2022 drought fallowing expected)",
+  "crop_history_source": "USDA CDL",
+
+  "crs": "EPSG:4326",
+  "country": "US",
+  "state": "California",
+  "county": "Colusa",
+  "corners_order": "[lon, lat]",
+  "corners": {
+    "bottom_left":  [-122.1530, 39.2762],
+    "bottom_right": [-122.1169, 39.2757],
+    "top_left":     [-122.1541, 39.3200],
+    "top_right":    [-122.1173, 39.3196]
+  },
+  "area_note": "Landscape of about 15 km2 drawn in CropScape, not a single farm field. Coordinates read from the CropScape map and are approximate.",
+  "analysis_years": { "start": 2005, "end": 2024 },
+  "crop_history": [
+    { "year": 2014, "rice_acres": null, "total_acres": null },
+    { "year": 2015, "rice_acres": null, "total_acres": null },
+    { "year": 2016, "rice_acres": null, "total_acres": null },
+    { "year": 2017, "rice_acres": null, "total_acres": null },
+    { "year": 2018, "rice_acres": null, "total_acres": null },
+    { "year": 2019, "rice_acres": null, "total_acres": null },
+    { "year": 2020, "rice_acres": null, "total_acres": null },
+    { "year": 2021, "rice_acres": null, "total_acres": null },
+    { "year": 2022, "rice_acres": null, "total_acres": null },
+    { "year": 2023, "rice_acres": null, "total_acres": null },
+    { "year": 2024, "rice_acres": null, "total_acres": null },
+    { "year": 2025, "rice_acres": 3634.4, "total_acres": 3648.2 }
+  ],
+  "retrieved": "2026-11-14"
+}
