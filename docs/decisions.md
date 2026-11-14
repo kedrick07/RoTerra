@@ -71,6 +71,27 @@ Real data isn't ready yet (Kedrick's pipeline is delayed) and Nia needs somethin
 
 ---
 
+## 2026-11-14 — Real data review: two decisions (Aizad)
+
+After merging Kedrick's real data (`dev`, merge `f9fe7e6`), the full test suite passed with `public/data/` on the merged branch. Kedrick's handoff raised two questions.
+
+### 1. Rainfall rule on a non-significant trend
+
+- **Finding:** annual rainfall averaged about 28% less in 2020–2024 than in 2005–2009, which triggers the 1.5× water rule. But the 20-year linear trend is **not statistically significant** (p = 0.187, `trend_significant: false`).
+- **Decision:** keep applying the rule, and **say so in the reason text**: *"The 20-year trend is not statistically significant (p = 0.19), so this may reflect recent dry years rather than a long-term shift."*
+- **Why:** the rule compares the last 5 years with the first 5. That is a real observed difference, and it matters for water planning even if it isn't a long-term trend. Hiding the boost would remove the main way NASA data shapes the ranking; hiding the caveat would overstate the evidence. Saying both is the honest option.
+- **Switch:** `REQUIRE_SIGNIFICANT_TREND` in `scoringConfig.js`. Set it to `true` to apply rules only to significant trends; the reason text then explains why nothing changed. (Aizad did not pick an option explicitly; this default was chosen and can be changed with that one line.)
+- Each trend adjustment now also carries `significant` (true / false / null) and `pValue`.
+
+### 2. Baseline shown as "Not advised now"
+
+- **Finding:** with all sliders at 50 and the real data, continuous rice scores **42.7** (engine output, matching Kedrick's estimate of about 43), below the 45 threshold.
+- **Decision:** keep the score and band unchanged, and add **`isBaseline: true`** to the current-practice rotation (id from `BASELINE_ROTATION_ID`). The UI should label it "Your current practice", as a reference point next to its score.
+- **Why not change the thresholds:** moving 45 to 40 only to get a nicer label would be tuning the rules to the answer. The low score is driven by the chosen priorities and the rainfall boost; with income set as the top priority, continuous rice ranks first.
+- **For Nia:** show "Your current practice" for the result with `isBaseline: true`.
+
+---
+
 ## AI assistance log
 
 For the README / submission SI-use disclosure.
@@ -79,3 +100,4 @@ For the README / submission SI-use disclosure.
 |---|---|---|---|
 | 2026-11-14 | Scoring engine, data loader, tests, this log | Claude (Anthropic) drafted code, fixtures and tests from the team's PRD, ARCHITECTURE and role file, and proposed default constants | Aizad: review and approve the formula, constants and contract change *(pending — update this cell once reviewed)* |
 | 2026-11-14 | Placeholder `public/data/*.json` and a data smoke test | Claude drafted the placeholder files and the test at Aizad's request | Aizad: review *(pending)* |
+| 2026-11-14 | Significance caveat, `isBaseline` flag, 3 tests | Claude implemented the decisions and verified them against the real data | Aizad chose the baseline option; the rainfall option was the default (pending his review) |

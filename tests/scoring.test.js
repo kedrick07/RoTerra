@@ -215,3 +215,40 @@ test('scenario: no scenario on a flat series means no water change', () => {
   const { multipliers } = computeTrendAdjustments(flatRainfall);
   assert.equal(multipliers.water, 1);
 });
+
+// ---------- decisions from real-data review (2026-11-14) ----------
+
+const droppingRain = (extra) => ({
+  indicators: [{
+    id: 'rainfall',
+    label: 'Annual rainfall',
+    values: Array.from({ length: 20 }, (_, i) => ({ year: 2005 + i, value: i < 10 ? 800 : 580 })),
+    ...extra,
+  }],
+});
+
+test('a non-significant trend still adjusts, but the reason says it is not significant', () => {
+  const { multipliers, adjustments } = computeTrendAdjustments(
+    droppingRain({ trend_significant: false, trend: { p_value: 0.187, n_years: 20 } }),
+  );
+  assert.equal(multipliers.water, 1.5);
+  const rain = adjustments[0];
+  assert.equal(rain.significant, false);
+  assert.equal(rain.pValue, 0.187);
+  assert.match(rain.reason, /20-year trend is not statistically significant \(p = 0\.19\)/);
+  assert.match(rain.reason, /recent dry years/);
+  assert.equal(rain.sentence, undefined);
+});
+
+test('a significant trend has no caveat in the reason', () => {
+  const { adjustments } = computeTrendAdjustments(
+    droppingRain({ trend_significant: true, trend: { p_value: 0.01, n_years: 20 } }),
+  );
+  assert.equal(adjustments[0].significant, true);
+  assert.doesNotMatch(adjustments[0].reason, /not statistically significant/);
+});
+
+test('only the baseline rotation is flagged isBaseline', () => {
+  const results = scoreRotations(rotations, crops, trends, sliders(50));
+  assert.deepEqual(results.filter((r) => r.isBaseline).map((r) => r.rotationId), ['baseline']);
+});

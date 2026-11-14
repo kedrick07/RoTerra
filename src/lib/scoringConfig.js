@@ -53,5 +53,16 @@ export const TREND_RULES = [
   { indicatorId: 'ndvi', direction: 'decrease', thresholdPct: 5, dimension: 'soil', multiplier: 1.25 },
 ];
 
+// If true, a trend rule only applies when trends.json marks the indicator's
+// long-term trend as statistically significant (trend_significant: true).
+// If false (current choice), the rule still applies, but the reason text says
+// plainly when the trend is not significant. See docs/decisions.md.
+export const REQUIRE_SIGNIFICANT_TREND = false;
+
+// The rotation that represents the farmer's current practice. It is still
+// scored and banded, but flagged with isBaseline so the UI can label it
+// "Your current practice" (a reference point, not a recommendation).
+export const BASELINE_ROTATION_ID = 'baseline';
+
 // Decimal places used when rounding scores for output.
 export const SCORE_DECIMALS = 1;

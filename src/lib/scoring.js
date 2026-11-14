@@ -4,7 +4,7 @@
 //
 // Contract used by the UI:
 //   scoreRotations(rotations, crops, trends, weights, scenario = null)
-//   -> [{ rotationId, name, rank, totalScore, band,
+//   -> [{ rotationId, name, isBaseline, rank, totalScore, band,
 //         dimensions: { water: { score, weight, contribution }, ... },
 //         adjustments: [{ reason, effect, ... }] }]
 // `weights` are the five slider values (0-100). Every constant lives in
@@ -12,6 +12,8 @@
 
 import {
   BANDS,
+  BASELINE_ROTATION_ID,
+  REQUIRE_SIGNIFICANT_TREND,
   DIMENSIONS,
   DIMENSION_LABELS,
   INVERTED_TRAITS,
@@ -112,6 +114,21 @@ export function trendChange(indicator, windowYears = TREND_WINDOW_YEARS, recentF
   };
 }
 
+// Reads the significance fields Kedrick's pipeline adds to each indicator.
+// significant: true | false | null (null = not reported).
+export function trendSignificance(indicator) {
+  const significant = typeof indicator.trend_significant === 'boolean' ? indicator.trend_significant : null;
+  const pValue = typeof indicator.trend?.p_value === 'number' ? indicator.trend.p_value : null;
+  const years = indicator.trend?.n_years;
+  const span = typeof years === 'number' ? `${years}-year` : 'long-term';
+  const pText = pValue === null ? '' : ` (p = ${pValue.toFixed(2)})`;
+  return {
+    significant,
+    pValue,
+    sentence: `The ${span} trend is not statistically significant${pText},`,
+  };
+}
+
 function ruleMatches(rule, changePct) {
   if (rule.direction === 'decrease') return changePct <= -rule.thresholdPct;
   if (rule.direction === 'increase') return changePct >= rule.thresholdPct;
@@ -187,16 +204,33 @@ export function computeTrendAdjustments(trends, scenario = null) {
     const verb = change.changePct < 0 ? 'fell' : 'rose';
     const basis = `${change.lastPeriod} average vs ${change.firstPeriod} average${indicator.source ? `; source: ${indicator.source}` : ''}`;
     const matched = rules.find((rule) => ruleMatches(rule, change.changePct));
+    const significance = trendSignificance(indicator);
+    const { sentence: _sentence, ...significanceFields } = significance;
 
-    if (matched) {
+    if (matched && REQUIRE_SIGNIFICANT_TREND && significance.significant === false) {
+      adjustments.push({
+        type: 'trend',
+        indicatorId,
+        dimension,
+        multiplier: 1,
+        changePct: roundScore(change.changePct),
+        ...significanceFields,
+        reason: `${label} ${verb} ${shownPct}% (${basis}). ${significance.sentence} so the ${dimLabel} priority was not adjusted.`,
+        effect: 'No change',
+      });
+    } else if (matched) {
       multipliers[dimension] *= matched.multiplier;
+      const caveat = significance.significant === false
+        ? ` ${significance.sentence} so this may reflect recent ${verb === 'fell' ? 'dry' : 'wet'} years rather than a long-term shift.`
+        : '';
       adjustments.push({
         type: 'trend',
         indicatorId,
         dimension,
         multiplier: matched.multiplier,
         changePct: roundScore(change.changePct),
-        reason: `${label} ${verb} ${shownPct}% (${basis}). Your ${dimLabel} priority counts ${formatMultiplier(matched.multiplier)} as much.`,
+        ...significanceFields,
+        reason: `${label} ${verb} ${shownPct}% (${basis}).${caveat} Your ${dimLabel} priority counts ${formatMultiplier(matched.multiplier)} as much.`,
         effect: `${DIMENSION_LABELS[dimension]} weight ${formatMultiplier(matched.multiplier)}`,
       });
     } else {
@@ -280,6 +314,7 @@ export function scoreRotations(rotations, crops, trends, weights, scenario = nul
     return {
       rotationId: rotation.id,
       name: rotation.name,
+      isBaseline: rotation.id === BASELINE_ROTATION_ID,
       totalScore,
       band: bandForScore(totalScore),
       dimensions,
