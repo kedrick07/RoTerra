@@ -4,37 +4,128 @@
   "region": "Colusa Basin, Colusa County, California",
   "lat": 39.2979,
   "lon": -122.1355,
-  "bbox": [-122.1541, 39.2757, -122.1169, 39.3200],
+  "bbox": [
+    -122.1541,
+    39.2757,
+    -122.1169,
+    39.32
+  ],
   "area_ha": 1476,
-  "current_practice": "continuous rice (provisional, pending CDL history check; 2022 drought fallowing expected)",
+  "current_practice": "Continuous rice: rice was the dominant CDL class in 11 of 12 years (2014-2025); non-rice dominant in 2022",
   "crop_history_source": "USDA CDL",
-
   "crs": "EPSG:4326",
   "country": "US",
   "state": "California",
   "county": "Colusa",
   "corners_order": "[lon, lat]",
   "corners": {
-    "bottom_left":  [-122.1530, 39.2762],
-    "bottom_right": [-122.1169, 39.2757],
-    "top_left":     [-122.1541, 39.3200],
-    "top_right":    [-122.1173, 39.3196]
+    "bottom_left": [
+      -122.153,
+      39.2762
+    ],
+    "bottom_right": [
+      -122.1169,
+      39.2757
+    ],
+    "top_left": [
+      -122.1541,
+      39.32
+    ],
+    "top_right": [
+      -122.1173,
+      39.3196
+    ]
   },
   "area_note": "Landscape of about 15 km2 drawn in CropScape, not a single farm field. Coordinates read from the CropScape map and are approximate.",
-  "analysis_years": { "start": 2005, "end": 2024 },
+  "analysis_years": {
+    "start": 2005,
+    "end": 2024
+  },
   "crop_history": [
-    { "year": 2014, "rice_acres": null, "total_acres": null },
-    { "year": 2015, "rice_acres": null, "total_acres": null },
-    { "year": 2016, "rice_acres": null, "total_acres": null },
-    { "year": 2017, "rice_acres": null, "total_acres": null },
-    { "year": 2018, "rice_acres": null, "total_acres": null },
-    { "year": 2019, "rice_acres": null, "total_acres": null },
-    { "year": 2020, "rice_acres": null, "total_acres": null },
-    { "year": 2021, "rice_acres": null, "total_acres": null },
-    { "year": 2022, "rice_acres": null, "total_acres": null },
-    { "year": 2023, "rice_acres": null, "total_acres": null },
-    { "year": 2024, "rice_acres": null, "total_acres": null },
-    { "year": 2025, "rice_acres": 3634.4, "total_acres": 3648.2 }
+    {
+      "year": 2014,
+      "rice_acres": 3058.4,
+      "total_acres": 3756.9,
+      "fallow_acres": 643.4,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2015,
+      "rice_acres": 3106.9,
+      "total_acres": 3756.9,
+      "fallow_acres": 596.0,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2016,
+      "rice_acres": 3659.3,
+      "total_acres": 3756.9,
+      "fallow_acres": 65.4,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2017,
+      "rice_acres": 3530.1,
+      "total_acres": 3756.9,
+      "fallow_acres": 180.8,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2018,
+      "rice_acres": 3567.4,
+      "total_acres": 3756.9,
+      "fallow_acres": 124.3,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2019,
+      "rice_acres": 3614.8,
+      "total_acres": 3756.9,
+      "fallow_acres": 59.6,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2020,
+      "rice_acres": 3376.0,
+      "total_acres": 3756.9,
+      "fallow_acres": 292.9,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2021,
+      "rice_acres": 2680.5,
+      "total_acres": 3756.9,
+      "fallow_acres": 990.5,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2022,
+      "rice_acres": 0.0,
+      "total_acres": 3756.9,
+      "fallow_acres": 3664.0,
+      "dominant_class": "Fallow/Idle Cropland"
+    },
+    {
+      "year": 2023,
+      "rice_acres": 3602.1,
+      "total_acres": 3756.9,
+      "fallow_acres": 81.4,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2024,
+      "rice_acres": 3659.7,
+      "total_acres": 3756.9,
+      "fallow_acres": 2.9,
+      "dominant_class": "Rice"
+    },
+    {
+      "year": 2025,
+      "rice_acres": 3583.4,
+      "total_acres": 3756.9,
+      "fallow_acres": 1.6,
+      "dominant_class": "Rice"
+    }
   ],
   "retrieved": "2026-11-14"
 }
