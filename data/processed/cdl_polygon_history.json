@@ -1,0 +1,110 @@
+{
+  "2014": {
+    "rice_acres": 3058.4,
+    "total_acres": 3756.9,
+    "fallow_acres": 643.4,
+    "dominant_class": "Rice",
+    "rice_share_pct": 81.41,
+    "fallow_share_pct": 17.13,
+    "pixels": 16893
+  },
+  "2015": {
+    "rice_acres": 3106.9,
+    "total_acres": 3756.9,
+    "fallow_acres": 596.0,
+    "dominant_class": "Rice",
+    "rice_share_pct": 82.7,
+    "fallow_share_pct": 15.86,
+    "pixels": 16893
+  },
+  "2016": {
+    "rice_acres": 3659.3,
+    "total_acres": 3756.9,
+    "fallow_acres": 65.4,
+    "dominant_class": "Rice",
+    "rice_share_pct": 97.4,
+    "fallow_share_pct": 1.74,
+    "pixels": 16893
+  },
+  "2017": {
+    "rice_acres": 3530.1,
+    "total_acres": 3756.9,
+    "fallow_acres": 180.8,
+    "dominant_class": "Rice",
+    "rice_share_pct": 93.96,
+    "fallow_share_pct": 4.81,
+    "pixels": 16893
+  },
+  "2018": {
+    "rice_acres": 3567.4,
+    "total_acres": 3756.9,
+    "fallow_acres": 124.3,
+    "dominant_class": "Rice",
+    "rice_share_pct": 94.96,
+    "fallow_share_pct": 3.31,
+    "pixels": 16893
+  },
+  "2019": {
+    "rice_acres": 3614.8,
+    "total_acres": 3756.9,
+    "fallow_acres": 59.6,
+    "dominant_class": "Rice",
+    "rice_share_pct": 96.22,
+    "fallow_share_pct": 1.59,
+    "pixels": 16893
+  },
+  "2020": {
+    "rice_acres": 3376.0,
+    "total_acres": 3756.9,
+    "fallow_acres": 292.9,
+    "dominant_class": "Rice",
+    "rice_share_pct": 89.86,
+    "fallow_share_pct": 7.8,
+    "pixels": 16893
+  },
+  "2021": {
+    "rice_acres": 2680.5,
+    "total_acres": 3756.9,
+    "fallow_acres": 990.5,
+    "dominant_class": "Rice",
+    "rice_share_pct": 71.35,
+    "fallow_share_pct": 26.37,
+    "pixels": 16893
+  },
+  "2022": {
+    "rice_acres": 0.0,
+    "total_acres": 3756.9,
+    "fallow_acres": 3664.0,
+    "dominant_class": "Fallow/Idle Cropland",
+    "rice_share_pct": 0.0,
+    "fallow_share_pct": 97.53,
+    "pixels": 16893
+  },
+  "2023": {
+    "rice_acres": 3602.1,
+    "total_acres": 3756.9,
+    "fallow_acres": 81.4,
+    "dominant_class": "Rice",
+    "rice_share_pct": 95.88,
+    "fallow_share_pct": 2.17,
+    "pixels": 16893
+  },
+  "2024": {
+    "rice_acres": 3659.7,
+    "total_acres": 3756.9,
+    "fallow_acres": 2.9,
+    "dominant_class": "Rice",
+    "rice_share_pct": 97.41,
+    "fallow_share_pct": 0.08,
+    "pixels": 16893
+  },
+  "2025": {
+    "rice_acres": 3583.4,
+    "total_acres": 3756.9,
+    "fallow_acres": 1.6,
+    "dominant_class": "Rice",
+    "rice_share_pct": 95.38,
+    "fallow_share_pct": 0.04,
+    "pixels": 16893
+  }
+}
