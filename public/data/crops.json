@@ -1,33 +1,82 @@
 {
-  "placeholder": true,
-  "placeholder_note": "PLACEHOLDER: illustrative trait values (0-10 scale) for building the UI. Not agronomic data. Needs local agronomic review.",
+  "scale_note": "Traits are on a 0-10 scale; higher water_need is worse for the farmer.",
   "crops": [
     {
       "crop_id": "rice",
       "name": "Rice",
-      "traits": { "water_need": 9, "income": 8, "soil_health": 3, "pest_break": 1, "equipment_fit": 10 },
-      "notes": "PLACEHOLDER values. Flooded crop with high water use; existing equipment fits.",
+      "traits": {
+        "water_need": 9,
+        "income": 8,
+        "soil_health": 3,
+        "pest_break": 1,
+        "equipment_fit": 10
+      },
+      "notes": "Flooded crop with high water use; existing equipment fits.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "wheat",
+      "name": "Winter wheat",
+      "traits": {
+        "water_need": 4,
+        "income": 4,
+        "soil_health": 6,
+        "pest_break": 7,
+        "equipment_fit": 8
+      },
+      "notes": "Small grain; adds residue and a different crop family. Needs good winter drainage.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "soybean",
+      "name": "Soybean or dry bean",
+      "traits": {
+        "water_need": 6,
+        "income": 6,
+        "soil_health": 7,
+        "pest_break": 7,
+        "equipment_fit": 6
+      },
+      "notes": "Legume that fixes nitrogen. Needs summer irrigation and drained soil.",
       "needs_local_review": true
     },
     {
       "crop_id": "safflower",
       "name": "Safflower",
-      "traits": { "water_need": 3, "income": 5, "soil_health": 6, "pest_break": 8, "equipment_fit": 6 },
-      "notes": "PLACEHOLDER values. Deep-rooted, drought-tolerant oilseed.",
+      "traits": {
+        "water_need": 3,
+        "income": 5,
+        "soil_health": 6,
+        "pest_break": 8,
+        "equipment_fit": 6
+      },
+      "notes": "Deep-rooted, drought-tolerant oilseed.",
       "needs_local_review": true
     },
     {
       "crop_id": "sunflower",
       "name": "Sunflower",
-      "traits": { "water_need": 4, "income": 6, "soil_health": 5, "pest_break": 7, "equipment_fit": 5 },
-      "notes": "PLACEHOLDER values.",
+      "traits": {
+        "water_need": 4,
+        "income": 6,
+        "soil_health": 5,
+        "pest_break": 7,
+        "equipment_fit": 5
+      },
+      "notes": "Summer oilseed; not in the default rotations (swap in if wanted).",
       "needs_local_review": true
     },
     {
       "crop_id": "fallow",
       "name": "Fallow (idle season)",
-      "traits": { "water_need": 0, "income": 1, "soil_health": 5, "pest_break": 6, "equipment_fit": 10 },
-      "notes": "PLACEHOLDER values. Field left unplanted for a season; income may come from water transfers (not modelled).",
+      "traits": {
+        "water_need": 0,
+        "income": 1,
+        "soil_health": 5,
+        "pest_break": 6,
+        "equipment_fit": 10
+      },
+      "notes": "Field left unplanted; income may come from water transfers (not modelled).",
       "needs_local_review": true
     }
   ]

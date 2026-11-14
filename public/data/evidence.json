@@ -1,56 +1,74 @@
 {
-  "placeholder": true,
-  "placeholder_note": "PLACEHOLDER: evidence entries are not yet filled in from real retrievals. Replace with Kedrick's provenance records.",
   "evidence": [
     {
-      "id": "rainfall",
-      "source": "NASA POWER (PRECTOTCORR) — PLACEHOLDER, not yet retrieved",
-      "url": "https://power.larc.nasa.gov/",
-      "resolution": "point (0.5° grid)",
-      "coverage": "2005-2024",
-      "retrieved": "not yet retrieved",
-      "confidence": "low",
-      "limitations": "PLACEHOLDER: values shown are synthetic until real data is fetched."
+      "id": "power_precip",
+      "source": "NASA POWER daily, PRECTOTCORR (AG community)",
+      "url": "https://power.larc.nasa.gov/docs/",
+      "resolution": "gridded model product, about 50 km",
+      "coverage": "2005-2024 daily, point at site centre",
+      "retrieved": "2026-11-14",
+      "confidence": "medium",
+      "limitations": "Gridded product, not a rain gauge; calendar-year sums; high year-to-year variability, no statistically clear trend."
     },
     {
-      "id": "temperature",
-      "source": "NASA POWER (T2M) — PLACEHOLDER, not yet retrieved",
-      "url": "https://power.larc.nasa.gov/",
-      "resolution": "point (0.5° grid)",
-      "coverage": "2005-2024",
-      "retrieved": "not yet retrieved",
-      "confidence": "low",
-      "limitations": "PLACEHOLDER: values shown are synthetic until real data is fetched."
+      "id": "power_temp",
+      "source": "NASA POWER daily, T2M (AG community)",
+      "url": "https://power.larc.nasa.gov/docs/",
+      "resolution": "gridded model product, about 50 km",
+      "coverage": "2005-2024 daily, point at site centre",
+      "retrieved": "2026-11-14",
+      "confidence": "medium",
+      "limitations": "Model-based; part of the warming signal may reflect the data source."
     },
     {
-      "id": "ndvi",
-      "source": "Landsat NDVI — PLACEHOLDER, not yet retrieved",
-      "url": "https://earthexplorer.usgs.gov/",
-      "resolution": "30 m",
-      "coverage": "2005-2024",
-      "retrieved": "not yet retrieved",
-      "confidence": "low",
-      "limitations": "PLACEHOLDER: values shown are synthetic until real data is fetched."
+      "id": "power_rh",
+      "source": "NASA POWER daily, RH2M (AG community)",
+      "url": "https://power.larc.nasa.gov/docs/",
+      "resolution": "gridded model product, about 50 km",
+      "coverage": "2005-2024 daily, point at site centre",
+      "retrieved": "2026-11-14",
+      "confidence": "medium",
+      "limitations": "Model-based humidity, annual mean."
     },
     {
-      "id": "soil",
-      "source": "USDA NRCS SSURGO — PLACEHOLDER, not yet retrieved",
-      "url": "https://www.nrcs.usda.gov/resources/data-and-reports/soils",
-      "resolution": "field scale",
-      "coverage": "demo field",
-      "retrieved": "not yet retrieved",
-      "confidence": "low",
-      "limitations": "PLACEHOLDER: soil description is an example until SSURGO data is fetched."
+      "id": "landsat_ndvi",
+      "source": "Landsat 8/9 Collection 2 Level-2 via Microsoft Planetary Computer",
+      "url": "https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2",
+      "resolution": "30 m, mean over the site bounding box",
+      "coverage": "2014-2025, May-Sep scenes with cloud cover under 40%",
+      "retrieved": "2026-11-14",
+      "confidence": "high",
+      "limitations": "Peak of per-scene means; cloud-masked with QA bands; one 2022 scene skipped (HTTP 403). 2021-2022 values reflect fallow land, not climate."
     },
     {
-      "id": "crop-traits",
-      "source": "Team assumptions — PLACEHOLDER",
-      "url": "",
-      "resolution": "n/a",
-      "coverage": "n/a",
-      "retrieved": "n/a",
-      "confidence": "low",
-      "limitations": "Crop trait values are illustrative and need local agronomic review."
+      "id": "openet",
+      "source": "OpenET Ensemble monthly evapotranspiration (gridMET reference ET)",
+      "url": "https://etdata.org/",
+      "resolution": "30 m, single pixel at the site centre",
+      "coverage": "2015-2025 (no collection for 2014)",
+      "retrieved": "2026-11-14",
+      "confidence": "medium",
+      "limitations": "Single pixel, not a field average; API returned intermittent errors (retried); 2021-2022 are low because the site was largely fallow."
+    },
+    {
+      "id": "cdl",
+      "source": "USDA NASS Cropland Data Layer",
+      "url": "https://nassgeodata.gmu.edu/CropScape/",
+      "resolution": "30 m, pixel counts inside the site polygon",
+      "coverage": "2014-2025",
+      "retrieved": "2026-11-14",
+      "confidence": "high",
+      "limitations": "Classified satellite product with its own accuracy limits; site is a landscape of about 15 km2, not a single farm field."
+    },
+    {
+      "id": "ssurgo",
+      "source": "USDA NRCS SSURGO via Soil Data Access",
+      "url": "https://sdmdataaccess.nrcs.usda.gov/",
+      "resolution": "map-unit polygons (field scale)",
+      "coverage": "Map units intersecting the site bounding box",
+      "retrieved": "2026-11-14",
+      "confidence": "medium",
+      "limitations": "Top horizon only; component shares are normalised percentages, not area fractions; available water capacity not retrieved; constraints are rule-derived."
     }
   ]
 }
