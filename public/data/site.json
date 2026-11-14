@@ -10,7 +10,7 @@
     -122.1169,
     39.32
   ],
-  "area_ha": 1476,
+  "area_ha": 1520,
   "current_practice": "Continuous rice: rice was the dominant CDL class in 11 of 12 years (2014-2025); non-rice dominant in 2022",
   "crop_history_source": "USDA CDL",
   "crs": "EPSG:4326",
@@ -36,7 +36,7 @@
       39.3196
     ]
   },
-  "area_note": "Landscape of about 15 km2 drawn in CropScape, not a single farm field. Coordinates read from the CropScape map and are approximate.",
+  "area_note": "Landscape of about 15 km2 drawn in CropScape, not a single farm field. Coordinates read from the CropScape map and are approximate. CDL pixel counts inside the corner polygon give 3,756.9 acres (about 1,520 ha); an earlier estimate of 1,476 ha came from a slightly different clip.",
   "analysis_years": {
     "start": 2005,
     "end": 2024
