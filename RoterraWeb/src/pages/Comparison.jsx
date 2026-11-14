@@ -1,54 +1,88 @@
 import { useMemo } from "react";
 import { ComposedChart, Area, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
-import { rotations, criteria, fan, validation } from "../data/placeholder";
+import rotationsData from "../../../public/data/rotations.json";
+import cropsData from "../../../public/data/crops.json";
+import trendsData from "../../../public/data/trends.json";
+import { scoreRotations } from "../../../src/lib/scoring.js";
+import { DIMENSIONS, DIMENSION_LABELS, BANDS } from "../../../src/lib/scoringConfig.js";
+import { fan, validation } from "../data/placeholder"; // still placeholder, see notes
+
+// Segment colours for the breakdown bar (same order as DIMENSIONS)
 const COLORS = ["#2f7fc1", "#d9a521", "#7a5a35", "#c0462f", "#5d8a3f"];
+// TODO: swap these for the rating-band colours in DESIGN.md (I haven't seen that file)
+const BAND_COLORS = { "strong-fit": "#2e7d32", promising: "#7cb342", "needs-review": "#f9a825", "not-advised": "#c62828" };
 
 export default function Comparison({ priorities, onWhy }) {
-  const ranked = useMemo(() => {
-    const tw = criteria.reduce((a, c) => a + priorities[c], 0) || 1;
-    return rotations.map((r) => ({ ...r, total: Math.round(criteria.reduce((a, c) => a + r.scores[c] * priorities[c], 0) / tw) }));
+  const { results, error } = useMemo(() => {
+    try {
+      return { results: scoreRotations(rotationsData, cropsData, trendsData, priorities), error: null };
+    } catch (e) {
+      return { results: [], error: e.message }; // shown below, never silent
+    }
   }, [priorities]);
-  const best = Math.max(...ranked.map((r) => r.total));
+
+  if (error) {
+    return <div role="alert" className="glass"><h4>Couldn’t score the rotations</h4><p>{error}</p></div>;
+  }
+
   return (
     <>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {ranked.map((r) => (
-          <div key={r.id} className="glass" style={r.total === best ? { outline: "3px solid #111" } : {}}>
-            <h3>Rotation {r.id}</h3>
-            <p className="text-center text-sm">{r.name}</p>
-            <p className="text-center font-display text-5xl my-1">{r.total}</p>
-            <p className="note text-center">rule-based score / 100, weighted by your priorities</p>
-          </div>
-        ))}
+        {results.map((r) => {
+          const band = BANDS.find((b) => b.id === r.band);
+          return (
+            <div key={r.rotationId} className="glass" style={r.rank === 1 ? { outline: "3px solid #111" } : {}}>
+              <h3>{r.name}</h3>
+              {r.isBaseline && <p className="text-center"><span className="pill">Your current practice</span></p>}
+              <p className="text-center font-display text-5xl my-1">{r.totalScore}</p>
+              <p className="text-center">
+                <span className="pill" style={{ borderColor: BAND_COLORS[r.band], background: BAND_COLORS[r.band] + "33" }}>
+                  {band?.label ?? r.band}
+                </span>
+              </p>
+              <p className="note text-center mt-1">Rank {r.rank} · score / 100, weighted by your priorities</p>
+            </div>
+          );
+        })}
       </div>
+
       <div className="grid gap-6 lg:grid-cols-2 mt-6">
         <div className="glass">
           <h4>Score breakdown</h4>
-          {ranked.map((r) => (
-            <div key={r.id} className="my-3"><b>{r.id}</b>
+          {results.map((r) => (
+            <div key={r.rotationId} className="my-3">
+              <b>{r.name}</b>
               <div className="flex h-4 rounded overflow-hidden bg-black/10 cursor-pointer" onClick={() => onWhy("scores")}>
-                {criteria.map((c, i) => <span key={c} style={{ width: `${r.scores[c] / 5}%`, background: COLORS[i] }} title={`${c}: ${r.scores[c]}`} />)}
+                {DIMENSIONS.map((c, i) => (
+                  <span key={c} style={{ width: `${r.dimensions[c].contribution}%`, background: COLORS[i] }}
+                    title={`${DIMENSION_LABELS[c]}: ${r.dimensions[c].contribution}`} />
+                ))}
               </div>
             </div>
           ))}
-          <p>{criteria.map((c, i) => <span key={c} className="pill capitalize" style={{ borderColor: COLORS[i] }}>{c}</span>)}</p>
-          <p className="note">Click a bar for the rule, weight and source.</p>
+          <p>{DIMENSIONS.map((c, i) => <span key={c} className="pill" style={{ borderColor: COLORS[i] }}>{DIMENSION_LABELS[c]}</span>)}</p>
+          <p className="note">Segments add up to the total score.</p>
         </div>
+
         <div className="glass">
-          <h4>Rank stability across futures</h4>
-          {[...rotations].sort((a, b) => b.stability - a.stability).map((r) => (
-            <div key={r.id} className="grid grid-cols-[30px_1fr_50px] items-center gap-3 my-3">
-              <b>{r.id}</b>
-              <div className="h-4 rounded bg-black/15"><div className="h-full rounded bg-black" style={{ width: `${r.stability}%` }} /></div>
-              <span>{r.stability}%</span>
-            </div>
+          <h4>Why these scores</h4>
+          {results.map((r) => (
+            <details key={r.rotationId} className="my-2">
+              <summary className="cursor-pointer font-semibold">{r.name}</summary>
+              {r.adjustments.length === 0
+                ? <p className="note mt-1">No adjustments applied.</p>
+                : <ul className="list-disc pl-5 mt-1">
+                    {r.adjustments.map((a, i) => <li key={i}>{a.reason} <span className="note">({a.effect})</span></li>)}
+                  </ul>}
+            </details>
           ))}
-          <p className="note">“Rotation B ranks first in 71% of futures” (placeholder)</p>
         </div>
       </div>
+
+      {/* Placeholder panels, to discuss with the team (not in the PRD MVP list) */}
       <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr] mt-6">
         <div className="glass">
-          <h4>Futures fan (precomputed JSON)</h4>
+          <h4>Futures fan (placeholder data)</h4>
           <ResponsiveContainer width="100%" height={200}>
             <ComposedChart data={fan}>
               <XAxis dataKey="year" tick={{ fontSize: 11 }} stroke="#000" />
@@ -58,13 +92,12 @@ export default function Comparison({ priorities, onWhy }) {
               <Line dataKey="median" stroke="#000" strokeWidth={2} dot={false} isAnimationActive={false} />
             </ComposedChart>
           </ResponsiveContainer>
-          <p className="note">Bands show 50% and 90% of futures</p>
+          <p className="note">Placeholder, not real data.</p>
         </div>
         <div className="glass">
-          <h4>Forecast validation (held-out years)</h4>
+          <h4>Forecast validation (placeholder)</h4>
           <table className="wire"><thead><tr><th>Model</th><th>MAE</th><th>RMSE</th></tr></thead>
             <tbody>{validation.map((v) => <tr key={v.model}><td>{v.model}</td><td>{v.mae}</td><td>{v.rmse}</td></tr>)}</tbody></table>
-          <p className="note mt-2">If Chronos-2 doesn’t win, say so.</p>
         </div>
       </div>
     </>
