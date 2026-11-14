@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+:root { --ink:#111; --glass:rgba(238, 240, 222, 0.405); }
+html, body { min-height:100%; }
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  color: var(--ink);
+  /* background: #98b566; shows through where the photo is faded */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20px;              /* extra edge so the blur doesn't show pale borders */
+  z-index: -1;
+  background: url("/paddy.jpg") center / cover no-repeat;
+  filter: blur(6px);         /* more blur: 12px, less: 4px */
+  opacity: 0.9;              /* lower = more faded, e.g. 0.5 */
+  
+}
+.font-display { font-family:"League Spartan", sans-serif; font-weight:800; }
+.glass { background:var(--glass); border-radius:30px; padding:22px 26px; backdrop-filter:blur(6px); }
+.glass h3 { font-weight:600; font-size:22px; text-decoration:underline; text-align:center; margin-bottom:10px; }
+.glass h4 { font-weight:600; font-size:17px; margin-bottom:8px; }
+.note { font-size:13px; color:#2e3a24; font-style:italic; }
+.pill { display:inline-block; border:1.5px solid #111; border-radius:999px; padding:1px 10px; font-size:13px; margin-right:4px; }
+.btn-ink { background:#111; color:#fff; border-radius:999px; padding:0 28px; font-weight:600; font-size:18px; border:2px solid #111; }
+.btn-ghost-ink { background:rgba(255,255,255,.75); color:#111; border:2px solid #111; border-radius:999px; padding:0 28px; font-weight:600; font-size:18px; }
+.range { --range-thumb:#fff; color:#111; }
+.range::-webkit-slider-thumb { border:2px solid #111; }
+table.wire { width:100%; border-collapse:collapse; font-size:14px; }
+table.wire th, table.wire td { text-align:left; padding:8px 10px; border-bottom:1px solid rgba(0,0,0,.2); vertical-align:top; }
+.globe { width:min(520px,80vw); aspect-ratio:1; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #dbe9f7 0 6%, #4d8fc4 20%, #1f5f9b 55%, #0e3a66);
+  box-shadow:0 0 0 2px rgba(255,255,255,.4); position:relative; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
+.slide-in { animation: slideIn .4s ease; }
+@media (prefers-reduced-motion: reduce) { .slide-in { animation: none; } }
