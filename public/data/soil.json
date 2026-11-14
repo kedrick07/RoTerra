@@ -1,0 +1,21 @@
+{
+  "placeholder": true,
+  "placeholder_note": "PLACEHOLDER: example soil description for building the UI. Replace with SSURGO data for the chosen field.",
+  "source": "PLACEHOLDER (to be replaced by USDA NRCS SSURGO)",
+  "components": [
+    {
+      "name": "Placeholder clay soil",
+      "texture": "clay",
+      "drainage_class": "poorly drained",
+      "organic_matter_pct": 2.0,
+      "available_water_capacity": "moderate"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "drainage",
+      "label": "Poor drainage may limit crops other than rice",
+      "severity": "PLACEHOLDER: severity not yet assessed"
+    }
+  ]
+}

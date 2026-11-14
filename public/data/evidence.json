@@ -1,0 +1,56 @@
+{
+  "placeholder": true,
+  "placeholder_note": "PLACEHOLDER: evidence entries are not yet filled in from real retrievals. Replace with Kedrick's provenance records.",
+  "evidence": [
+    {
+      "id": "rainfall",
+      "source": "NASA POWER (PRECTOTCORR) — PLACEHOLDER, not yet retrieved",
+      "url": "https://power.larc.nasa.gov/",
+      "resolution": "point (0.5° grid)",
+      "coverage": "2005-2024",
+      "retrieved": "not yet retrieved",
+      "confidence": "low",
+      "limitations": "PLACEHOLDER: values shown are synthetic until real data is fetched."
+    },
+    {
+      "id": "temperature",
+      "source": "NASA POWER (T2M) — PLACEHOLDER, not yet retrieved",
+      "url": "https://power.larc.nasa.gov/",
+      "resolution": "point (0.5° grid)",
+      "coverage": "2005-2024",
+      "retrieved": "not yet retrieved",
+      "confidence": "low",
+      "limitations": "PLACEHOLDER: values shown are synthetic until real data is fetched."
+    },
+    {
+      "id": "ndvi",
+      "source": "Landsat NDVI — PLACEHOLDER, not yet retrieved",
+      "url": "https://earthexplorer.usgs.gov/",
+      "resolution": "30 m",
+      "coverage": "2005-2024",
+      "retrieved": "not yet retrieved",
+      "confidence": "low",
+      "limitations": "PLACEHOLDER: values shown are synthetic until real data is fetched."
+    },
+    {
+      "id": "soil",
+      "source": "USDA NRCS SSURGO — PLACEHOLDER, not yet retrieved",
+      "url": "https://www.nrcs.usda.gov/resources/data-and-reports/soils",
+      "resolution": "field scale",
+      "coverage": "demo field",
+      "retrieved": "not yet retrieved",
+      "confidence": "low",
+      "limitations": "PLACEHOLDER: soil description is an example until SSURGO data is fetched."
+    },
+    {
+      "id": "crop-traits",
+      "source": "Team assumptions — PLACEHOLDER",
+      "url": "",
+      "resolution": "n/a",
+      "coverage": "n/a",
+      "retrieved": "n/a",
+      "confidence": "low",
+      "limitations": "Crop trait values are illustrative and need local agronomic review."
+    }
+  ]
+}

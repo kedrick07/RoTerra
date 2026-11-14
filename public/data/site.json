@@ -1,0 +1,13 @@
+{
+  "placeholder": true,
+  "placeholder_note": "PLACEHOLDER: approximate Colusa County location, not the chosen demo field. Replace with the CropScape-selected field.",
+  "site_id": "sac-rice-01",
+  "name": "Sacramento Valley rice field (placeholder)",
+  "region": "Colusa County, California",
+  "lat": 39.21,
+  "lon": -122.01,
+  "bbox": [-122.02, 39.2, -122.0, 39.22],
+  "area_ha": 50,
+  "current_practice": "continuous rice",
+  "crop_history_source": "PLACEHOLDER (to be confirmed from USDA CDL)"
+}

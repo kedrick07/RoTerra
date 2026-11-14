@@ -1,0 +1,34 @@
+{
+  "placeholder": true,
+  "placeholder_note": "PLACEHOLDER: illustrative trait values (0-10 scale) for building the UI. Not agronomic data. Needs local agronomic review.",
+  "crops": [
+    {
+      "crop_id": "rice",
+      "name": "Rice",
+      "traits": { "water_need": 9, "income": 8, "soil_health": 3, "pest_break": 1, "equipment_fit": 10 },
+      "notes": "PLACEHOLDER values. Flooded crop with high water use; existing equipment fits.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "safflower",
+      "name": "Safflower",
+      "traits": { "water_need": 3, "income": 5, "soil_health": 6, "pest_break": 8, "equipment_fit": 6 },
+      "notes": "PLACEHOLDER values. Deep-rooted, drought-tolerant oilseed.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "sunflower",
+      "name": "Sunflower",
+      "traits": { "water_need": 4, "income": 6, "soil_health": 5, "pest_break": 7, "equipment_fit": 5 },
+      "notes": "PLACEHOLDER values.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "fallow",
+      "name": "Fallow (idle season)",
+      "traits": { "water_need": 0, "income": 1, "soil_health": 5, "pest_break": 6, "equipment_fit": 10 },
+      "notes": "PLACEHOLDER values. Field left unplanted for a season; income may come from water transfers (not modelled).",
+      "needs_local_review": true
+    }
+  ]
+}

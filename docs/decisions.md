@@ -60,6 +60,17 @@ Tests use Node's built-in runner (`node --test`), so no new dependency is needed
 
 ---
 
+## 2026-11-14 — Placeholder data in public/data/ (Aizad, agreed while waiting on real data)
+
+Real data isn't ready yet (Kedrick's pipeline is delayed) and Nia needs something to build the UI against. So all six files in `public/data/` now hold **placeholder** content that matches the ARCHITECTURE schemas.
+
+- Every file has `"placeholder": true` and a `placeholder_note`, and every source string starts with "PLACEHOLDER". The UI should show a visible "placeholder data" badge whenever `placeholder` is true.
+- The values are synthetic or illustrative, **not observations**, and must not be presented as NASA or USDA data.
+- The example strategies are: continuous rice, rice → safflower, rice → sunflower and rice → fallow. Kedrick replaces them with the team's agreed four.
+- **Kedrick:** pull `dev` first, then overwrite these files with the real data and drop the `placeholder` fields. `tests/publicData.test.js` checks that whatever is in `public/data/` still loads and scores.
+
+---
+
 ## AI assistance log
 
 For the README / submission SI-use disclosure.
@@ -67,3 +78,4 @@ For the README / submission SI-use disclosure.
 | Date | What | AI role | Human role |
 |---|---|---|---|
 | 2026-11-14 | Scoring engine, data loader, tests, this log | Claude (Anthropic) drafted code, fixtures and tests from the team's PRD, ARCHITECTURE and role file, and proposed default constants | Aizad: review and approve the formula, constants and contract change *(pending — update this cell once reviewed)* |
+| 2026-11-14 | Placeholder `public/data/*.json` and a data smoke test | Claude drafted the placeholder files and the test at Aizad's request | Aizad: review *(pending)* |

@@ -1,0 +1,42 @@
+{
+  "placeholder": true,
+  "placeholder_note": "PLACEHOLDER: example strategies for building the UI. Kedrick to replace with the team's agreed 4 strategies.",
+  "rotations": [
+    {
+      "id": "baseline",
+      "name": "Continuous rice (current practice)",
+      "sequence": ["rice"],
+      "rationale": "PLACEHOLDER: the current practice, used as the comparison point.",
+      "benefits": ["Uses existing equipment and know-how", "Established market"],
+      "risks": ["High water use under allocation cuts", "No break in rice pest and weed cycles"],
+      "info_gaps": ["PLACEHOLDER data, not real values"]
+    },
+    {
+      "id": "rice-safflower",
+      "name": "Rice then safflower",
+      "sequence": ["rice", "safflower"],
+      "rationale": "PLACEHOLDER: low-water oilseed in the off year.",
+      "benefits": ["Much lower water need in the safflower year", "Breaks rice pest cycles"],
+      "risks": ["Heavy clay rice soils may drain poorly for safflower", "Lower income than rice"],
+      "info_gaps": ["PLACEHOLDER data, not real values", "Crop scores are averaged across the sequence (simplification)"]
+    },
+    {
+      "id": "rice-sunflower",
+      "name": "Rice then sunflower",
+      "sequence": ["rice", "sunflower"],
+      "rationale": "PLACEHOLDER: summer oilseed in the off year.",
+      "benefits": ["Lower water need than rice", "Some pest break"],
+      "risks": ["Needs different equipment", "Market contracts needed"],
+      "info_gaps": ["PLACEHOLDER data, not real values", "Crop scores are averaged across the sequence (simplification)"]
+    },
+    {
+      "id": "rice-fallow",
+      "name": "Rice then fallow",
+      "sequence": ["rice", "fallow"],
+      "rationale": "PLACEHOLDER: leave the field idle every other year to save water.",
+      "benefits": ["Lowest water use", "No new equipment needed"],
+      "risks": ["Little or no income in the fallow year", "Weed growth if not managed"],
+      "info_gaps": ["PLACEHOLDER data, not real values", "Water-transfer income not modelled"]
+    }
+  ]
+}

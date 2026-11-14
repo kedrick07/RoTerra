@@ -1,0 +1,282 @@
+{
+  "placeholder": true,
+  "placeholder_note": "PLACEHOLDER: synthetic trend values for building the UI. Not NASA observations. Replace with Kedrick's processed data.",
+  "indicators": [
+    {
+      "id": "rainfall",
+      "label": "Rainfall",
+      "unit": "mm/yr",
+      "source": "PLACEHOLDER (to be replaced by NASA POWER PRECTOTCORR)",
+      "resolution": "point (0.5° grid)",
+      "period": "2005-2024",
+      "confidence": "high",
+      "values": [
+        {
+          "year": 2005,
+          "value": 470
+        },
+        {
+          "year": 2006,
+          "value": 520
+        },
+        {
+          "year": 2007,
+          "value": 380
+        },
+        {
+          "year": 2008,
+          "value": 440
+        },
+        {
+          "year": 2009,
+          "value": 490
+        },
+        {
+          "year": 2010,
+          "value": 510
+        },
+        {
+          "year": 2011,
+          "value": 455
+        },
+        {
+          "year": 2012,
+          "value": 400
+        },
+        {
+          "year": 2013,
+          "value": 330
+        },
+        {
+          "year": 2014,
+          "value": 350
+        },
+        {
+          "year": 2015,
+          "value": 360
+        },
+        {
+          "year": 2016,
+          "value": 470
+        },
+        {
+          "year": 2017,
+          "value": 560
+        },
+        {
+          "year": 2018,
+          "value": 390
+        },
+        {
+          "year": 2019,
+          "value": 480
+        },
+        {
+          "year": 2020,
+          "value": 330
+        },
+        {
+          "year": 2021,
+          "value": 300
+        },
+        {
+          "year": 2022,
+          "value": 380
+        },
+        {
+          "year": 2023,
+          "value": 520
+        },
+        {
+          "year": 2024,
+          "value": 420
+        }
+      ],
+      "trend_summary": "PLACEHOLDER: synthetic series for UI building, not observations. About 15% lower in 2020-2024 than 2005-2009."
+    },
+    {
+      "id": "temperature",
+      "label": "Mean temperature",
+      "unit": "°C",
+      "source": "PLACEHOLDER (to be replaced by NASA POWER T2M)",
+      "resolution": "point (0.5° grid)",
+      "period": "2005-2024",
+      "confidence": "high",
+      "values": [
+        {
+          "year": 2005,
+          "value": 16.1
+        },
+        {
+          "year": 2006,
+          "value": 16.0
+        },
+        {
+          "year": 2007,
+          "value": 16.2
+        },
+        {
+          "year": 2008,
+          "value": 15.9
+        },
+        {
+          "year": 2009,
+          "value": 16.0
+        },
+        {
+          "year": 2010,
+          "value": 16.3
+        },
+        {
+          "year": 2011,
+          "value": 16.2
+        },
+        {
+          "year": 2012,
+          "value": 16.4
+        },
+        {
+          "year": 2013,
+          "value": 16.5
+        },
+        {
+          "year": 2014,
+          "value": 16.8
+        },
+        {
+          "year": 2015,
+          "value": 16.9
+        },
+        {
+          "year": 2016,
+          "value": 16.5
+        },
+        {
+          "year": 2017,
+          "value": 16.4
+        },
+        {
+          "year": 2018,
+          "value": 16.6
+        },
+        {
+          "year": 2019,
+          "value": 16.5
+        },
+        {
+          "year": 2020,
+          "value": 16.9
+        },
+        {
+          "year": 2021,
+          "value": 17.0
+        },
+        {
+          "year": 2022,
+          "value": 16.7
+        },
+        {
+          "year": 2023,
+          "value": 16.8
+        },
+        {
+          "year": 2024,
+          "value": 16.9
+        }
+      ],
+      "trend_summary": "PLACEHOLDER: synthetic series for UI building, not observations. About 0.8 °C warmer in 2020-2024 than 2005-2009."
+    },
+    {
+      "id": "ndvi",
+      "label": "NDVI (growing season)",
+      "unit": "index",
+      "source": "PLACEHOLDER (to be replaced by Landsat NDVI)",
+      "resolution": "30 m",
+      "period": "2005-2024",
+      "confidence": "medium",
+      "values": [
+        {
+          "year": 2005,
+          "value": 0.64
+        },
+        {
+          "year": 2006,
+          "value": 0.62
+        },
+        {
+          "year": 2007,
+          "value": 0.63
+        },
+        {
+          "year": 2008,
+          "value": 0.65
+        },
+        {
+          "year": 2009,
+          "value": 0.61
+        },
+        {
+          "year": 2010,
+          "value": 0.63
+        },
+        {
+          "year": 2011,
+          "value": 0.62
+        },
+        {
+          "year": 2012,
+          "value": 0.61
+        },
+        {
+          "year": 2013,
+          "value": 0.6
+        },
+        {
+          "year": 2014,
+          "value": 0.59
+        },
+        {
+          "year": 2015,
+          "value": 0.6
+        },
+        {
+          "year": 2016,
+          "value": 0.62
+        },
+        {
+          "year": 2017,
+          "value": 0.63
+        },
+        {
+          "year": 2018,
+          "value": 0.61
+        },
+        {
+          "year": 2019,
+          "value": 0.62
+        },
+        {
+          "year": 2020,
+          "value": 0.61
+        },
+        {
+          "year": 2021,
+          "value": 0.6
+        },
+        {
+          "year": 2022,
+          "value": 0.62
+        },
+        {
+          "year": 2023,
+          "value": 0.61
+        },
+        {
+          "year": 2024,
+          "value": 0.62
+        }
+      ],
+      "trend_summary": "PLACEHOLDER: synthetic series for UI building, not observations. About 3% lower in 2020-2024 than 2005-2009."
+    }
+  ]
+}
