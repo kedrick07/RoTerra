@@ -10,7 +10,12 @@ import { fan, validation } from "../data/placeholder"; // still placeholder, see
 // Segment colours for the breakdown bar (same order as DIMENSIONS)
 const COLORS = ["#2f7fc1", "#d9a521", "#7a5a35", "#c0462f", "#5d8a3f"];
 // TODO: swap these for the rating-band colours in DESIGN.md (I haven't seen that file)
-const BAND_COLORS = { "strong-fit": "#2e7d32", promising: "#7cb342", "needs-review": "#f9a825", "not-advised": "#c62828" };
+const BAND_STYLE = {
+  "strong-fit":   { background: "rgba(62,124,58,0.12)",  color: "#3E7C3A" },
+  promising:      { background: "#FFFFFF",               color: "#3E7C3A" },
+  "needs-review": { background: "rgba(199,127,46,0.12)", color: "#C77F2E" },
+  "not-advised":  { background: "rgba(181,83,60,0.12)",  color: "#B5533C" },
+};
 
 export default function Comparison({ priorities, onWhy }) {
   const { results, error } = useMemo(() => {
@@ -36,7 +41,7 @@ export default function Comparison({ priorities, onWhy }) {
               {r.isBaseline && <p className="text-center"><span className="pill">Your current practice</span></p>}
               <p className="text-center font-display text-5xl my-1">{r.totalScore}</p>
               <p className="text-center">
-                <span className="pill" style={{ borderColor: BAND_COLORS[r.band], background: BAND_COLORS[r.band] + "33" }}>
+                <span className="pill" style={{ borderColor: BAND_STYLE[r.band], borderColor: BAND_STYLE[r.band].color }}>
                   {band?.label ?? r.band}
                 </span>
               </p>

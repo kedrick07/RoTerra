@@ -34,7 +34,7 @@ export default function Home({ go }) {
         </GlobeBoundary>
       </section>
       <div className="glass mb-5"><h4>The problem</h4>
-        <p>Malaysian paddy smallholders are planting into a shifting climate: rainfall is less predictable, and last decade’s “best” rotation may not hold. Single-year recommendations hide that risk.</p></div>
+        <p>California rice growers in the Sacramento Valley are planting into a shifting climate: temperatures are rising and humidity is falling, while rainfall shows no clear trend. Single-year recommendations can hide that risk.</p></div>
       <div className="glass"><h4>How it works</h4>
         <div className="grid gap-4 md:grid-cols-4">
           {steps.map(([t, s], i) => (
