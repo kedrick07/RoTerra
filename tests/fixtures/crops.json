@@ -1,0 +1,32 @@
+{
+  "crops": [
+    {
+      "crop_id": "rice",
+      "name": "Rice",
+      "traits": { "water_need": 9, "income": 7, "soil_health": 3, "pest_break": 1, "equipment_fit": 10 },
+      "notes": "TEST FIXTURE: illustrative values for automated tests only. Not agronomic data.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "safflower",
+      "name": "Safflower",
+      "traits": { "water_need": 3, "income": 5, "soil_health": 6, "pest_break": 8, "equipment_fit": 6 },
+      "notes": "TEST FIXTURE: illustrative values for automated tests only. Not agronomic data.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "sunflower",
+      "name": "Sunflower",
+      "traits": { "water_need": 4, "income": 6, "soil_health": 5, "pest_break": 7, "equipment_fit": 5 },
+      "notes": "TEST FIXTURE: illustrative values for automated tests only. Not agronomic data.",
+      "needs_local_review": true
+    },
+    {
+      "crop_id": "wheat",
+      "name": "Wheat",
+      "traits": { "water_need": 4, "income": 4, "soil_health": 6, "pest_break": 7, "equipment_fit": 7 },
+      "notes": "TEST FIXTURE: illustrative values for automated tests only. Not agronomic data.",
+      "needs_local_review": true
+    }
+  ]
+}
