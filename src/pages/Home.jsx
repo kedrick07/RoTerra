@@ -11,7 +11,7 @@ class GlobeBoundary extends Component {
 const steps = [
   ["Trends", "20 years of NASA rain, heat and NDVI for your plot"],
   ["Priorities", "Tell us what matters: water, income, soil, pest, equipment"],
-  ["Compare", "Four rotations scored across hundreds of futures"],
+  ["Compare", "Four rotations scored against your priorities and 20 years of observed trends"],
   ["Evidence", "Every score traces to a source and its limits"],
 ];
 export default function Home({ go }) {
@@ -22,8 +22,8 @@ export default function Home({ go }) {
           <h1 className="font-display text-7xl sm:text-8xl tracking-tighter leading-none">RoTerra</h1>
           <p className="text-white text-xl leading-normal max-w-[40ch] mt-3">
             See beyond today’s forecast.
-            Compare crop rotations across hundreds of climate futures.
-            Every score explained by NASA data.
+            Compare crop rotations against 20 years of observed climate trends.
+            Every score explained by its data source.
           </p>
           <button className="btn btn-ink mt-5 h-12" onClick={() => go("Explorer")}>Launch the Explorer</button>
         </div>
