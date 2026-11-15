@@ -1,4 +1,4 @@
-export const PAGES = ["Home", "Explorer", "Comparison", "Methodology"];
+const PAGES = ["Home", "Explorer", "Comparison", "Methodology"];
 export default function Nav({ page, go }) {
   return (
     <nav className="flex flex-wrap justify-between items-center gap-4 pt-9 pb-5">
