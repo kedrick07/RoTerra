@@ -1,0 +1,40 @@
+{
+  "rotations": [
+    {
+      "id": "baseline",
+      "name": "Continuous rice (current practice)",
+      "sequence": ["rice"],
+      "rationale": "TEST FIXTURE: baseline for comparison.",
+      "benefits": [],
+      "risks": [],
+      "info_gaps": ["TEST FIXTURE: not real data."]
+    },
+    {
+      "id": "rice-safflower",
+      "name": "Rice then safflower",
+      "sequence": ["rice", "safflower"],
+      "rationale": "TEST FIXTURE",
+      "benefits": [],
+      "risks": [],
+      "info_gaps": ["TEST FIXTURE: not real data."]
+    },
+    {
+      "id": "rice-sunflower",
+      "name": "Rice then sunflower",
+      "sequence": ["rice", "sunflower"],
+      "rationale": "TEST FIXTURE",
+      "benefits": [],
+      "risks": [],
+      "info_gaps": ["TEST FIXTURE: not real data."]
+    },
+    {
+      "id": "rice-wheat",
+      "name": "Rice then wheat",
+      "sequence": ["rice", "wheat"],
+      "rationale": "TEST FIXTURE",
+      "benefits": [],
+      "risks": [],
+      "info_gaps": ["TEST FIXTURE: not real data."]
+    }
+  ]
+}

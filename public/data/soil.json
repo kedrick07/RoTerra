@@ -1,0 +1,93 @@
+{
+  "source": "USDA NRCS SSURGO",
+  "retrieval": "Soil Data Access, map units intersecting the site bbox",
+  "components": [
+    {
+      "name": "Willows",
+      "texture": "silty clay",
+      "drainage_class": "Poorly drained",
+      "organic_matter_pct": 2.8,
+      "available_water_capacity": null,
+      "share_pct": 92.0,
+      "hydrologic_group": "D",
+      "clay_pct": 51.5,
+      "sand_pct": 2.9,
+      "silt_pct": 45.6
+    },
+    {
+      "name": "Capay",
+      "texture": "clay",
+      "drainage_class": "Moderately well drained",
+      "organic_matter_pct": 1.5,
+      "available_water_capacity": null,
+      "share_pct": 5.0,
+      "hydrologic_group": "D",
+      "clay_pct": 40.0,
+      "sand_pct": 29.6,
+      "silt_pct": 30.4
+    },
+    {
+      "name": "Unnamed",
+      "texture": "silty clay",
+      "drainage_class": "Very poorly drained",
+      "organic_matter_pct": 2.8,
+      "available_water_capacity": null,
+      "share_pct": 2.0,
+      "hydrologic_group": null,
+      "clay_pct": 51.5,
+      "sand_pct": 2.9,
+      "silt_pct": 45.6
+    },
+    {
+      "name": "Scribner",
+      "texture": "silt loam",
+      "drainage_class": "Poorly drained",
+      "organic_matter_pct": 3.0,
+      "available_water_capacity": null,
+      "share_pct": 1.0,
+      "hydrologic_group": "C/D",
+      "clay_pct": 25.0,
+      "sand_pct": 20.5,
+      "silt_pct": 54.5
+    }
+  ],
+  "constraints": [
+    {
+      "id": "poor_drainage",
+      "label": "Poorly drained soils: suit flooded rice, limit upland rotation crops",
+      "severity": "high",
+      "basis": "Dominant component Willows (92.0%): Poorly drained",
+      "needs_local_review": true
+    },
+    {
+      "id": "heavy_clay",
+      "label": "Heavy clay topsoil: slow to work, can crack when dry",
+      "severity": "moderate",
+      "basis": "Weighted topsoil clay 50.7%",
+      "needs_local_review": true
+    },
+    {
+      "id": "slow_permeability",
+      "label": "Very slow water movement through the soil",
+      "severity": "moderate",
+      "basis": "Weighted saturated conductivity 0.2 um/s",
+      "needs_local_review": true
+    }
+  ],
+  "weighted_topsoil": {
+    "clay_pct": 50.7,
+    "sand_pct": 4.4,
+    "silt_pct": 44.9,
+    "organic_matter_pct": 2.7,
+    "ph": 7.6,
+    "ksat_um_per_s": 0.2
+  },
+  "limitations": [
+    "Shares are normalised component percentages across intersecting map units, not measured area fractions of the site",
+    "Top horizon only (0 cm upper depth)",
+    "Missing values (e.g. hydrologic group) left as null",
+    "available_water_capacity not retrieved (null)",
+    "Texture computed from top-horizon sand/silt/clay with the standard USDA triangle rules",
+    "Constraints are rule-derived from SSURGO values and need local review"
+  ]
+}
