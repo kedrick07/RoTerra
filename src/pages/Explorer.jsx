@@ -1,8 +1,8 @@
 import { MapContainer, TileLayer, CircleMarker, Rectangle, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import TrendCarousel from "../components/TrendCarousel";
-import siteData from "../../../public/data/site.json";
-import { DIMENSIONS, DIMENSION_LABELS } from "../../../src/lib/scoringConfig.js";
+import siteData from "../../public/data/site.json";
+import { DIMENSIONS, DIMENSION_LABELS } from "../lib/scoringConfig.js";
 
 const POS = [siteData.lat, siteData.lon];
 // bbox in site.json is [minLon, minLat, maxLon, maxLat]

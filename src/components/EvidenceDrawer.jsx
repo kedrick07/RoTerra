@@ -1,5 +1,5 @@
-import trendsData from "../../../public/data/trends.json";
-import evidenceData from "../../../public/data/evidence.json";
+import trendsData from "../../public/data/trends.json";
+import evidenceData from "../../public/data/evidence.json";
 
 // Explanations of the method itself (not data), for the "priorities" and "scores" buttons
 const METHOD = {

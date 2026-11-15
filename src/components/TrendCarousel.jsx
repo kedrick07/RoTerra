@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TrendChart from "./TrendChart";
-import trendsData from "../../../public/data/trends.json";
+import trendsData from "../../public/data/trends.json";
 
 const SLIDES = ["rainfall", "temperature", "ndvi"]; // indicator ids, in display order
 const BY_ID = Object.fromEntries(trendsData.indicators.map((ind) => [ind.id, ind]));

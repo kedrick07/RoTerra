@@ -1,5 +1,5 @@
-import trendsData from "../../../public/data/trends.json";
-import evidenceData from "../../../public/data/evidence.json";
+import trendsData from "../../public/data/trends.json";
+import evidenceData from "../../public/data/evidence.json";
 
 const claims = trendsData.indicators
   .filter((i) => ["rainfall", "temperature", "humidity", "ndvi"].includes(i.id))

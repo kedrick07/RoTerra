@@ -1,11 +1,9 @@
 import { useMemo } from "react";
-import { ComposedChart, Area, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
-import rotationsData from "../../../public/data/rotations.json";
-import cropsData from "../../../public/data/crops.json";
-import trendsData from "../../../public/data/trends.json";
-import { scoreRotations } from "../../../src/lib/scoring.js";
-import { DIMENSIONS, DIMENSION_LABELS, BANDS } from "../../../src/lib/scoringConfig.js";
-import { fan, validation } from "../data/placeholder"; // still placeholder, see notes
+import rotationsData from "../../public/data/rotations.json";
+import cropsData from "../../public/data/crops.json";
+import trendsData from "../../public/data/trends.json";
+import { scoreRotations } from "../lib/scoring.js";
+import { DIMENSIONS, DIMENSION_LABELS, BANDS } from "../lib/scoringConfig.js";
 
 // Segment colours for the breakdown bar (same order as DIMENSIONS)
 const COLORS = ["#2f7fc1", "#d9a521", "#7a5a35", "#c0462f", "#5d8a3f"];
@@ -41,7 +39,7 @@ export default function Comparison({ priorities, onWhy }) {
               {r.isBaseline && <p className="text-center"><span className="pill">Your current practice</span></p>}
               <p className="text-center font-display text-5xl my-1">{r.totalScore}</p>
               <p className="text-center">
-                <span className="pill" style={{ borderColor: BAND_STYLE[r.band], borderColor: BAND_STYLE[r.band].color }}>
+                <span className="pill" style={{ borderColor: BAND_STYLE[r.band].color }}>
                   {band?.label ?? r.band}
                 </span>
               </p>
@@ -81,28 +79,6 @@ export default function Comparison({ priorities, onWhy }) {
                   </ul>}
             </details>
           ))}
-        </div>
-      </div>
-
-      {/* Placeholder panels, to discuss with the team (not in the PRD MVP list) */}
-      <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr] mt-6">
-        <div className="glass">
-          <h4>Futures fan (placeholder data)</h4>
-          <ResponsiveContainer width="100%" height={200}>
-            <ComposedChart data={fan}>
-              <XAxis dataKey="year" tick={{ fontSize: 11 }} stroke="#000" />
-              <YAxis tick={{ fontSize: 11 }} stroke="#000" width={32} />
-              <Area dataKey="b90" stroke="none" fill="rgba(0,0,0,.12)" isAnimationActive={false} />
-              <Area dataKey="b50" stroke="none" fill="rgba(0,0,0,.2)" isAnimationActive={false} />
-              <Line dataKey="median" stroke="#000" strokeWidth={2} dot={false} isAnimationActive={false} />
-            </ComposedChart>
-          </ResponsiveContainer>
-          <p className="note">Placeholder, not real data.</p>
-        </div>
-        <div className="glass">
-          <h4>Forecast validation (placeholder)</h4>
-          <table className="wire"><thead><tr><th>Model</th><th>MAE</th><th>RMSE</th></tr></thead>
-            <tbody>{validation.map((v) => <tr key={v.model}><td>{v.model}</td><td>{v.mae}</td><td>{v.rmse}</td></tr>)}</tbody></table>
         </div>
       </div>
     </>
