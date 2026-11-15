@@ -62,6 +62,8 @@ Tests use Node's built-in runner (`node --test`), so no new dependency is needed
 
 ## 2026-11-14 — Placeholder data in public/data/ (Aizad, agreed while waiting on real data)
 
+*Superseded on 2026-11-14 by the real data merge, and on 2026-11-15 the last placeholder code was removed (see below). Kept for history.*
+
 Real data isn't ready yet (Kedrick's pipeline is delayed) and Nia needs something to build the UI against. So all six files in `public/data/` now hold **placeholder** content that matches the ARCHITECTURE schemas.
 
 - Every file has `"placeholder": true` and a `placeholder_note`, and every source string starts with "PLACEHOLDER". The UI should show a visible "placeholder data" badge whenever `placeholder` is true.
@@ -92,6 +94,40 @@ After merging Kedrick's real data (`dev`, merge `f9fe7e6`), the full test suite 
 
 ---
 
+## 2026-11-15 — Removed fabricated forecast content (Kedrick)
+
+**Files removed/changed:** `placeholder.js` (deleted), `src/pages/Comparison.jsx`, `src/pages/Home.jsx`
+
+- Deleted `placeholder.js`: it held synthetic trends, Malaysian paddy rotations, a synthetic "futures fan" and a "Chronos-2" validation table. No Chronos-2 model was ever used.
+- Removed the two placeholder panels (futures fan, forecast validation) from the Comparison page.
+- Rewrote the Home copy that claimed "hundreds of climate futures": the engine is rule-based and runs no futures simulation.
+- **Reason:** scientific integrity. Nothing synthetic may be shown as a model result. A real, honestly labelled projection (with real backtest error) may come back later as a stretch feature; until then the UI shows only observed data and rule-based scores.
+
+---
+
+## 2026-11-15 — Frontend moved to repo root; stack changes accepted (Kedrick)
+
+- The app had been scaffolded in a subfolder (`RoterraWeb/`) by mistake. It now lives at the repo root, and the scoring engine (`src/lib/`) and `tests/` sit beside it. The cross-package `../../../` imports and the Vite `server.fs.allow` workaround were removed.
+- `npm test` is `node --test tests/*.test.js` (35 tests). `npm run lint` is clean.
+- **Accepted deviations from the original rules:** Tailwind CSS 4 and daisyUI 5 for styling, and three.js (@react-three/fiber, drei) for the lazy-loaded hero globe. The globe is a decorative exception (~935 kB lazy chunk).
+- ESLint: `no-unused-vars` is set with `ignoreRestSiblings: true`, because the engine and one test deliberately drop a field with object rest destructuring.
+- Root markdown docs moved into `docs/` (`AGENTS.md`, `ARCHITECTURE.md`, `DESIGN.md`, `FOLDER_STRUCTURE.md`, `PRD.md`, `TASKS.md`, `ABOUT_PROJECT.md`); empty doc stubs were removed.
+
+---
+
+## 2026-11-15 — README data sources; additional datasets (Kedrick)
+
+- The README had listed IMERG, SMAP, ECOSTRESS and PRISM, but the pipeline only fetched five sources: NASA POWER, Landsat (via Planetary Computer), OpenET, USDA CDL and USDA SSURGO.
+- **Decision:** the README lists only what is in `public/data/evidence.json`. IMERG, SMAP, ECOSTRESS and PRISM are marked **[optional]** until each one is fetched, shown as a visible indicator, and changes a score. Any that are not integrated in time are removed from the README before submission.
+
+---
+
+## 2026-11-15 — Demo site is the Colusa Basin; Malaysia is an adaptation path only (Kedrick)
+
+- `docs/ABOUT_PROJECT.md` described a Sekinchan demo. It now describes the Colusa Basin, California, with Malaysian paddy as a planned adaptation (README paragraph and deck slide only), matching the 2026-11-14 pivot.
+
+---
+
 ## AI assistance log
 
 For the README / submission SI-use disclosure.
@@ -101,3 +137,4 @@ For the README / submission SI-use disclosure.
 | 2026-11-14 | Scoring engine, data loader, tests, this log | Claude (Anthropic) drafted code, fixtures and tests from the team's PRD, ARCHITECTURE and role file, and proposed default constants | Aizad: review and approve the formula, constants and contract change *(pending — update this cell once reviewed)* |
 | 2026-11-14 | Placeholder `public/data/*.json` and a data smoke test | Claude drafted the placeholder files and the test at Aizad's request | Aizad: review *(pending)* |
 | 2026-11-14 | Significance caveat, `isBaseline` flag, 3 tests | Claude implemented the decisions and verified them against the real data | Aizad chose the baseline option; the rainfall option was the default (pending his review) |
+| 2026-11-15 | Repository audit, Phase 1 fixes (integrity cleanup, README, docs, lint), step-by-step guidance | An AI assistant audited the repo, proposed fixes and drafted README/doc text and code changes | Kedrick applied, tested and committed every change, and reviewed the text before keeping it |

@@ -26,11 +26,11 @@ The goal is not to identify one universally best rotation. It is to make the ava
 
 ## Global Vision, Local Demonstration
 
-RoTerra has a global ambition, with an initial demonstration focused on paddy farming in Sekinchan, Selangor, Malaysia.
+RoTerra has a global ambition, with an initial demonstration focused on rice farming in the Colusa Basin of California's Sacramento Valley, USA.
 
-Sekinchan provides a concrete setting for exploring how environmental information and local farming considerations can inform rotation choices. It is the project's first demonstration case, not its permanent geographic boundary.
+The Colusa Basin is a data-rich setting where NASA Earth observations (POWER, Landsat) can be combined with USDA field data (Cropland Data Layer, SSURGO) and OpenET evapotranspiration. The demo site is a roughly 15 km² landscape drawn in CropScape, not a single farm field. It is the project's first demonstration case, not its permanent geographic boundary.
 
-The broader vision is to support additional regions through locally appropriate crop choices, soil information, farming practices, and language. Expansion would require local adaptation and review; the project does not assume that recommendations developed for one location are suitable everywhere.
+The broader vision is to support additional regions through locally appropriate crop choices, soil information, farming practices, and language. A planned next step is an adaptation to Malaysian paddy farming (for example Sekinchan, Selangor), reusing the same scoring engine and interface with local soil and crop data. Expansion would require local adaptation and review; the project does not assume that recommendations developed for one location are suitable everywhere.
 
 ## Meaningful Use of NASA Data
 
@@ -42,7 +42,7 @@ RoTerra prioritises relevant, explainable use of data over the number of dataset
 
 RoTerra is a decision-support prototype, not a guarantee of crop performance, income, or agricultural suitability. Its comparisons should distinguish observations from assumptions and clearly label illustrative values or missing information.
 
-Demonstrating the tool with Sekinchan data does not constitute field validation. Farmer feedback and local agronomic review would be needed before treating its suggestions as practical farming advice.
+Demonstrating the tool with Colusa Basin data does not constitute field validation, and crop trait scores are illustrative. Farmer feedback and local agronomic review would be needed before treating its suggestions as practical farming advice.
 
 The project is intended to support conversations between farmers, agricultural advisers, and other local stakeholders—not replace their experience or judgment.
 

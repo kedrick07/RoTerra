@@ -1,57 +1,73 @@
 # RoTerra — Live Build Checklist
 
-*Work top to bottom. Tell your AI agent: "read TASKS.md and build the next unchecked item."*
+*Status as of 2026-11-15 (Phase 1 audit fixes). Work top to bottom. Tell your AI agent: "read docs/TASKS.md and build the next unchecked item."*
 
-## Phase 0 — Setup (Saturday morning)
+## Phase 0 — Setup
 
-- [ ] Scaffold React + Vite app in `src/` (npm, JavaScript/JSX)
-- [ ] Install only: `react-leaflet`, `leaflet`, `recharts`
-- [ ] Design tokens stylesheet from `DESIGN.md` in `src/styles/`
-- [ ] Choose demo field in Colusa/Sutter County via CropScape; record coords in `site.json`
-- [ ] Verify NASA POWER parameter names against live API (PRECTOTCORR, T2M, RH2M)
+- [x] Scaffold React + Vite app (npm, JavaScript/JSX), now at the repo root
+- [x] Dependencies installed (react-leaflet, leaflet, recharts, plus Tailwind CSS, daisyUI, three.js — see `docs/DECISIONS.md`)
+- [x] Design styling in `src/index.css` (Tailwind-based; replaces the planned `src/styles/` tokens)
+- [x] Demo field chosen in Colusa County via CropScape; coordinates in `public/data/site.json`
+- [x] NASA POWER parameter names verified (PRECTOTCORR, T2M, RH2M)
 
-## Phase 1 — Data pipeline (Saturday)
+## Phase 1 — Data pipeline
 
-- [ ] `fetch_power.py` → 20-yr rainfall + temperature series → `data/processed/`
-- [ ] `fetch_imerg.py` → rainfall reliability / extreme-rain stats
-- [ ] `fetch_ndvi.py` → Landsat NDVI seasonal series
-- [ ] CDL crop history for the field (manual CropScape export OK) → baseline practice
-- [ ] `fetch_ssurgo.py` → soil components + constraints
-- [ ] `fetch_prism.py` / `fetch_openet.py` → cross-checks (drop if uncovered)
-- [ ] Draft `crops.json` traits + `rotations.json` (4 strategies) with "needs local review" flags
-- [ ] `validate_json.py` → publish all files to `public/data/`
+- [x] `fetch_power.py` → rainfall, temperature, humidity series → `data/processed/`
+- [x] `fetch_ndvi.py` → Landsat NDVI seasonal series (via Planetary Computer)
+- [x] CDL crop history for the field (manual CropScape export) → baseline practice
+- [x] `fetch_ssurgo.py` → soil components + constraints
+- [x] `fetch_openet.py` → evapotranspiration
+- [x] `crops.json` traits + `rotations.json` (4 strategies) with "needs local review" flags
+- [x] Validation inside `publish_data.py` → publish all files to `public/data/`
+- [ ] [optional] `fetch_imerg.py` → rainfall reliability / extremes (needs Earthdata account)
+- [ ] [optional] `fetch_prism.py` → climate cross-check
+- [ ] [optional] SMAP soil moisture fetch
+- [ ] [optional] ECOSTRESS fetch (drop if no cloud-free coverage)
 
-## Phase 2 — Core features (Saturday evening)
+## Phase 2 — Core features
 
-- [ ] Map panel with field marker + plot context
-- [ ] Trends panel: rainfall / temperature / NDVI charts with source + uncertainty labels
-- [ ] Scoring engine in `src/lib/scoring.js` (rule-based, weighted, trend-adjusted)
-- [ ] Rotation comparison cards with rating bands
-- [ ] Priority sliders (water, income, soil, pest, equipment) wired to rescoring
-- [ ] Expandable per-dimension score breakdowns
-- [ ] Evidence drawer (source, resolution, confidence, gaps)
+- [x] Map panel with field marker and AOI
+- [x] Trends panel: rainfall / temperature / NDVI charts with source + uncertainty labels
+- [x] Scoring engine in `src/lib/scoring.js` (rule-based, weighted, trend-adjusted), 35 tests passing
+- [x] Rotation comparison cards with rating bands
+- [x] Priority sliders wired to rescoring
+- [x] Expandable per-dimension score breakdowns
+- [x] Evidence drawer (source, resolution, confidence, gaps)
 
-## Phase 3 — MVP cut line (Sunday, only if Phase 2 done)
+## Phase 3 — MVP cut line
 
-- [ ] Scenario slider: rainfall −10% / −20% → weights shift, rankings change visibly
+- [ ] Scenario slider UI: rainfall −10% / −20% (engine already supports it; UI missing)
+- [ ] Surface all indicators in the Explorer (only 3 of 9 are charted)
+- [ ] Decide the data loader: wire `src/lib/data.js` into the app or delete it and log the decision
 
-## Phase 4 — UI polish (Sunday)
+## Phase 4 — UI polish
 
-- [ ] Pass `DESIGN.md` review: tokens, spacing, chart colors, empty/error states
+- [ ] Map: CartoDB Positron tiles and a green field marker per `docs/DESIGN.md`
+- [ ] Evidence drawer: ESC to close, focus trap, reachable from every breakdown segment
 - [ ] Mobile-responsiveness sanity check (judges may open on a phone)
 - [ ] Screenshots for README (map, trends, comparison, evidence drawer)
 
-## Phase 5 — Demo prep (Sunday afternoon)
+## Phase 5 — Demo prep
 
-- [ ] Deploy to GitHub Pages / Vercel; test the public link logged-out
-- [ ] 7-slide deck per `docs/` plan (title, problem, solution, demo x3, adaptability)
-- [ ] Upload demo to public link (YouTube unlisted or GitHub-hosted PDF)
+- [ ] Deploy to static hosting; test the public link logged-out and on a phone
+- [ ] 7-slide deck (title, problem, solution, demo x3, adaptability)
+- [ ] Upload demo to a public link (YouTube unlisted or GitHub-hosted PDF)
 - [ ] README final pass: demo link, screenshots, data sources with URLs, SI disclosure
+- [ ] Merge `dev` into `main`; `main` is the submission branch
 
-## Phase 6 — Submission (Sunday evening, before 11 PM)
+## Phase 6 — Submission (target ~9:00 PM, before 11:59 PM)
 
 - [ ] Fill form: name, summary (50–200 words), demo link, project link, details
-- [ ] SI-use selections (code + text) and README acknowledgment
+- [ ] SI-use selections and README acknowledgment
 - [ ] NASA Data field: every NASA resource with full URL
-- [ ] Other Data field: every other resource (Copernicus, USDA, libraries)
+- [ ] Other Data field: every other resource (USDA, OpenET, Planetary Computer, libraries)
 - [ ] Terms + originality confirmations → submit
+
+## Audit fixes (2026-11-15)
+
+- [x] Removed fabricated forecast placeholders (futures fan, "Chronos-2" table) and `placeholder.js`
+- [x] Corrected Home copy ("hundreds of climate futures")
+- [x] README sources match the pipeline; unintegrated datasets flagged [optional]
+- [x] `ABOUT_PROJECT.md` rewritten for the Colusa Basin
+- [x] Lint clean; page title and fonts fixed
+- [x] Frontend moved from `RoterraWeb/` to the repo root
