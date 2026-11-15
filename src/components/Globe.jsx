@@ -6,7 +6,7 @@ const reduced = typeof window !== "undefined" && window.matchMedia("(prefers-red
 
 function Earth() {
   const ref = useRef();
-  const map = useTexture("/earth.jpg");
+  const map = useTexture(`${import.meta.env.BASE_URL}earth.jpg`);
   // slow idle spin; OrbitControls handles drag on top of it
   useFrame((_, dt) => { if (!reduced && ref.current) ref.current.rotation.y += dt * 0.08; });
   return (
