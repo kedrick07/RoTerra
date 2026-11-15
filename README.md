@@ -8,7 +8,7 @@ RoTerra helps a Sacramento Valley rice grower compare crop-rotation strategies a
 
 ## Live Demo
 
-- App: `<deploy URL — fill after deploy>`
+- App: https://roterra.earth
 - Demo deck: `<public demo link — fill after upload>`
 
 ## The Problem
